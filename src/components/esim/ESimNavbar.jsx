@@ -12,20 +12,34 @@ const navLinks = [
 ];
 
 export default function ESimNavbar() {
-  const [scrolled, setScrolled] = useState(false);
+  const [scrolled, setScrolled] = useState(typeof window !== 'undefined' ? window.scrollY > 40 : false);
   const [mobileOpen, setMobileOpen] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
-    setScrolled(window.scrollY > 40);
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
   const scrollTo = (href) => {
+    const isMobile = mobileOpen;
     setMobileOpen(false);
-    const el = document.querySelector(href);
-    if (el) el.scrollIntoView({ behavior: 'smooth' });
+    
+    const delay = isMobile ? 150 : 0;
+    
+    setTimeout(() => {
+      const el = document.querySelector(href);
+      if (el) {
+        const navbarHeight = 64; // height of h-16 navbar
+        const elementPosition = el.getBoundingClientRect().top + window.scrollY;
+        const offsetPosition = elementPosition - navbarHeight - 16; // extra breathing room
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+      }
+    }, delay);
   };
 
   return (
