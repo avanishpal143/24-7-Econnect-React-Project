@@ -85,7 +85,7 @@ const cardVariants = {
 
 export default function ESimDestinations() {
   return (
-    <section id="destinations" className="py-24 relative overflow-hidden">
+    <section id="destinations" className="scroll-mt-20 py-24 relative overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-white" />
       <div className="absolute inset-0 opacity-[0.05]" style={{ backgroundImage: 'linear-gradient(rgba(79,70,229,1) 1px, transparent 1px), linear-gradient(90deg, rgba(79,70,229,1) 1px, transparent 1px)', backgroundSize: '60px 60px' }} />

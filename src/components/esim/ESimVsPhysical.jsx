@@ -48,15 +48,19 @@ export default function ESimVsPhysical() {
         >
           {/* Table header */}
           <div className="grid grid-cols-3 bg-slate-50 border-b border-slate-200">
-            <div className="p-4 text-slate-500 text-xs font-semibold uppercase tracking-wider">Feature</div>
-            <div className="p-4 text-center border-l border-slate-200">
-              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-indigo-50 border border-indigo-200">
-                <span className="text-indigo-600 text-xs font-bold tracking-wider">EConnect eSIM</span>
+            <div className="p-2 sm:p-4 text-slate-500 text-[10px] sm:text-xs font-semibold uppercase tracking-wider flex items-center">Feature</div>
+            <div className="p-2 sm:p-4 text-center border-l border-slate-200 flex items-center justify-center">
+              <div className="inline-flex items-center gap-1 sm:gap-2 px-1.5 sm:px-3 py-1 sm:py-1.5 rounded-lg bg-indigo-50 border border-indigo-200">
+                <span className="text-indigo-600 text-[10px] sm:text-xs font-bold tracking-wider">
+                  <span className="hidden sm:inline">EConnect </span>eSIM
+                </span>
               </div>
             </div>
-            <div className="p-4 text-center border-l border-slate-200">
-              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-white border border-slate-200 shadow-sm">
-                <span className="text-slate-700 text-xs font-bold tracking-wider">Physical SIM</span>
+            <div className="p-2 sm:p-4 text-center border-l border-slate-200 flex items-center justify-center">
+              <div className="inline-flex items-center gap-1 sm:gap-2 px-1.5 sm:px-3 py-1 sm:py-1.5 rounded-lg bg-white border border-slate-200 shadow-sm">
+                <span className="text-slate-700 text-[10px] sm:text-xs font-bold tracking-wider">
+                  <span className="hidden sm:inline">Physical </span>SIM
+                </span>
               </div>
             </div>
           </div>
@@ -71,26 +75,26 @@ export default function ESimVsPhysical() {
               transition={{ delay: i * 0.06, duration: 0.4 }}
               className={`grid grid-cols-3 border-t border-slate-100 ${i % 2 === 0 ? 'bg-slate-50/50' : 'bg-transparent'} hover:bg-slate-50 transition-colors`}
             >
-              <div className="p-4 text-slate-700 text-sm font-medium flex items-center">{row.feature}</div>
-              <div className="p-4 flex justify-center items-center border-l border-slate-100">
+              <div className="p-2 sm:p-4 text-slate-700 text-xs sm:text-sm font-medium flex items-center">{row.feature}</div>
+              <div className="p-2 sm:p-4 flex justify-center items-center border-l border-slate-100">
                 {row.esim ? (
-                  <div className="w-8 h-8 rounded-full bg-emerald-100 border border-emerald-200 flex items-center justify-center shadow-sm">
-                    <Check className="w-4 h-4 text-emerald-600 stroke-[3]" />
+                  <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-emerald-100 border border-emerald-200 flex items-center justify-center shadow-sm">
+                    <Check className="w-3 h-3 sm:w-4 sm:h-4 text-emerald-600 stroke-[3]" />
                   </div>
                 ) : (
-                  <div className="w-8 h-8 rounded-full bg-rose-100 border border-rose-200 flex items-center justify-center shadow-sm">
-                    <X className="w-4 h-4 text-rose-600 stroke-[3]" />
+                  <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-rose-100 border border-rose-200 flex items-center justify-center shadow-sm">
+                    <X className="w-3 h-3 sm:w-4 sm:h-4 text-rose-600 stroke-[3]" />
                   </div>
                 )}
               </div>
-              <div className="p-4 flex justify-center items-center border-l border-slate-100">
+              <div className="p-2 sm:p-4 flex justify-center items-center border-l border-slate-100">
                 {row.physical ? (
-                  <div className="w-8 h-8 rounded-full bg-emerald-100 border border-emerald-200 flex items-center justify-center shadow-sm">
-                    <Check className="w-4 h-4 text-emerald-600 stroke-[3]" />
+                  <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-emerald-100 border border-emerald-200 flex items-center justify-center shadow-sm">
+                    <Check className="w-3 h-3 sm:w-4 sm:h-4 text-emerald-600 stroke-[3]" />
                   </div>
                 ) : (
-                  <div className="w-8 h-8 rounded-full bg-rose-100 border border-rose-200 flex items-center justify-center shadow-sm">
-                    <X className="w-4 h-4 text-rose-600 stroke-[3]" />
+                  <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-rose-100 border border-rose-200 flex items-center justify-center shadow-sm">
+                    <X className="w-3 h-3 sm:w-4 sm:h-4 text-rose-600 stroke-[3]" />
                   </div>
                 )}
               </div>

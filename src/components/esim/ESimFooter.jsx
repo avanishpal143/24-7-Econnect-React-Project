@@ -62,19 +62,25 @@ export default function ESimFooter() {
           <ul className="space-y-3">
             <li className="flex items-start gap-2">
               <Mail className="w-4 h-4 mt-0.5 text-cyan-400 shrink-0" />
-              <span>support@econnect.in</span>
+              <a href="mailto:sales@24x7econnect.com" className="hover:text-cyan-400 transition-colors">
+                sales@24x7econnect.com
+              </a>
             </li>
             <li className="flex items-start gap-2">
               <Phone className="w-4 h-4 mt-0.5 text-cyan-400 shrink-0" />
-              <span>+91 98765 43210</span>
+              <a href="tel:+918287936724" className="hover:text-cyan-400 transition-colors">
+                +91 82879 36724
+              </a>
             </li>
             <li className="flex items-start gap-2">
               <MapPin className="w-4 h-4 mt-0.5 text-cyan-400 shrink-0" />
-              <span>New Delhi, India</span>
+              <span className="text-white/70">
+                1007, Aggarwal millenium tower 1, Netaji Subhash Place, Delhi 110034
+              </span>
             </li>
             <li className="flex items-start gap-2">
               <Globe className="w-4 h-4 mt-0.5 text-cyan-400 shrink-0" />
-              <span>190+ Countries Covered</span>
+              <span>180+ Countries Covered</span>
             </li>
           </ul>
         </div>

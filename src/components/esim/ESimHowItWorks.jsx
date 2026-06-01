@@ -46,7 +46,7 @@ const steps = [
 
 export default function ESimHowItWorks() {
   return (
-    <section id="how-it-works" className="py-24 relative overflow-hidden">
+    <section id="how-it-works" className="scroll-mt-20 py-24 relative overflow-hidden">
       <div className="absolute inset-0 bg-slate-50" />
 
       {/* Glow accent */}
@@ -108,7 +108,7 @@ export default function ESimHowItWorks() {
 
                 {/* Arrow connector — mobile */}
                 {i < steps.length - 1 && (
-                  <div className="lg:hidden flex justify-center my-2">
+                  <div className="sm:hidden flex justify-center my-2">
                     <div className="w-px h-6 bg-gradient-to-b from-slate-200 to-transparent" />
                   </div>
                 )}

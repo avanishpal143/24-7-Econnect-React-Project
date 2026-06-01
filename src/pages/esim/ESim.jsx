@@ -14,7 +14,7 @@ import SEOMeta from '../../components/shared/SEOMeta';
 
 export default function ESim() {
   return (
-    <div className="bg-[#071120] min-h-screen overflow-x-hidden">
+    <div className="bg-slate-50 min-h-screen overflow-x-hidden">
       <SEOMeta
         title="International eSIM for Travelers | EConnect eSIM"
         description="Stay connected globally with EConnect eSIM. High-speed prepaid data plans for 190+ countries. Instant activation, no physical SIM card required."

@@ -54,7 +54,7 @@ const features = [
 
 export default function ESimWhyChooseUs() {
   return (
-    <section id="why-esim" className="py-24 relative overflow-hidden">
+    <section id="why-esim" className="scroll-mt-20 py-24 relative overflow-hidden">
       <div className="absolute inset-0 bg-slate-50" />
       <div className="absolute inset-0 opacity-[0.05]" style={{ backgroundImage: 'linear-gradient(rgba(79,70,229,1) 1px, transparent 1px), linear-gradient(90deg, rgba(79,70,229,1) 1px, transparent 1px)', backgroundSize: '60px 60px' }} />
       <motion.div

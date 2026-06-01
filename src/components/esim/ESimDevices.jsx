@@ -63,7 +63,7 @@ export default function ESimDevices() {
   const [expanded, setExpanded] = useState(true);
 
   return (
-    <section id="devices" className="py-24 relative overflow-hidden">
+    <section id="devices" className="scroll-mt-20 py-24 relative overflow-hidden">
       <div className="absolute inset-0 bg-white" />
       <motion.div
         animate={{ scale: [1, 1.2, 1], opacity: [0.5, 0.8, 0.5], y: [0, -30, 0] }}

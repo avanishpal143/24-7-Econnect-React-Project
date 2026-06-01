@@ -3,7 +3,7 @@ import { MessageCircle, Phone, Mail } from 'lucide-react';
 
 export default function ESimCTA() {
   return (
-    <section id="cta" className="py-24 relative overflow-hidden">
+    <section id="cta" className="scroll-mt-20 py-24 relative overflow-hidden">
       <div className="absolute inset-0 bg-white" />
 
       {/* Animated glow */}

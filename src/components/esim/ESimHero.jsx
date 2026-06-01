@@ -99,11 +99,11 @@ export default function ESimHero() {
               className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-[1.05] tracking-tight mb-6"
             >
               Global eSIM
-              <br />
+              <br className="hidden lg:inline" />
               <span className="bg-gradient-to-r from-indigo-600 to-indigo-500 bg-clip-text text-transparent">
                 Connectivity
               </span>
-              <br />
+              <br className="hidden lg:inline" />
               for Modern Travelers
             </motion.h1>
 
@@ -169,13 +169,13 @@ export default function ESimHero() {
             <motion.div
               variants={pulseVariants}
               animate="animate"
-              className="absolute w-[420px] h-[420px] rounded-full border border-indigo-200/50 bg-indigo-50/50"
+              className="absolute sm:w-[420px] sm:h-[420px] w-[280px] h-[280px] rounded-full border border-indigo-200/50 bg-indigo-50/50"
             />
             <motion.div
               variants={pulseVariants}
               animate="animate"
               style={{ animationDelay: '1s' }}
-              className="absolute w-[320px] h-[320px] rounded-full border border-blue-200/50 bg-blue-50/50"
+              className="absolute sm:w-[320px] sm:h-[320px] w-[220px] h-[220px] rounded-full border border-blue-200/50 bg-blue-50/50"
             />
 
             {/* Center globe visual */}
@@ -231,7 +231,7 @@ export default function ESimHero() {
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.8, duration: 0.5 }}
-              className="absolute top-4 -left-4 lg:-left-8 px-4 py-3 rounded-xl bg-white/95 border border-slate-100 shadow-md backdrop-blur-sm"
+              className="absolute top-4 left-2 sm:-left-4 lg:-left-8 px-4 py-3 rounded-xl bg-white/95 border border-slate-100 shadow-md backdrop-blur-sm"
             >
               <div className="text-indigo-600 text-xl font-black">180+</div>
               <div className="text-slate-500 text-xs font-medium">Countries</div>
@@ -241,7 +241,7 @@ export default function ESimHero() {
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 1, duration: 0.5 }}
-              className="absolute bottom-4 -right-4 lg:-right-8 px-4 py-3 rounded-xl bg-white/95 border border-slate-100 shadow-md backdrop-blur-sm"
+              className="absolute bottom-4 right-2 sm:-right-4 lg:-right-8 px-4 py-3 rounded-xl bg-white/95 border border-slate-100 shadow-md backdrop-blur-sm"
             >
               <div className="text-emerald-500 text-xl font-black">99.9%</div>
               <div className="text-slate-500 text-xs font-medium">Uptime</div>

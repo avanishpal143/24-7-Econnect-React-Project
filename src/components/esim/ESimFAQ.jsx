@@ -41,7 +41,7 @@ export default function ESimFAQ() {
   const [open, setOpen] = useState(null);
 
   return (
-    <section id="faq" className="py-24 relative overflow-hidden">
+    <section id="faq" className="scroll-mt-20 py-24 relative overflow-hidden">
       <div className="absolute inset-0 bg-slate-50" />
       <div className="absolute top-1/2 right-0 w-[400px] h-[400px] bg-indigo-100/50 blur-[100px] rounded-full pointer-events-none" />
 
