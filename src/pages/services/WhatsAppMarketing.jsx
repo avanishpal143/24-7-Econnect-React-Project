@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Check, MessageCircle, Users, BarChart3, Zap, Shield, Headphones } from 'lucide-react';
+import { ArrowRight, ArrowLeft, Check, MessageCircle, Users, BarChart3, Zap, Shield, Headphones } from 'lucide-react';
 import { fadeInUp, staggerContainer } from '../../lib/utils';
 import SEOMeta from '../../components/shared/SEOMeta';
 import CTASection from '../../components/sections/CTASection';
@@ -109,83 +109,81 @@ export default function WhatsAppMarketing() {
       />
 
       {/* Hero */}
-      <section className="relative pt-24 pb-16 sm:py-24 bg-gray-900 overflow-hidden" aria-labelledby="wm-hero-heading">
-        <div className="absolute inset-0 opacity-[0.04]" style={{ backgroundImage: 'linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px)', backgroundSize: '48px 48px' }} />
-        <div className="absolute top-0 right-0 w-96 h-96 bg-green-600/20 rounded-full blur-3xl pointer-events-none" />
-        <div className="absolute bottom-0 left-0 w-72 h-72 bg-indigo-500/10 rounded-full blur-3xl pointer-events-none" />
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
-          <div className="grid lg:grid-cols-12 gap-12 items-center">
-            {/* Left Column: Text */}
-            <div className="lg:col-span-6 text-left">
-              {/* Breadcrumb */}
-              <nav aria-label="Breadcrumb" className="flex justify-start mb-6">
-                <ol className="flex items-center gap-2 text-xs text-gray-500">
-                  <li><Link to="/" className="hover:text-white transition-colors">Home</Link></li>
-                  <li className="text-gray-600">/</li>
-                  <li><Link to="/services" className="hover:text-white transition-colors">Services</Link></li>
-                  <li className="text-gray-600">/</li>
-                  <li className="text-gray-400">WhatsApp Marketing</li>
-                </ol>
-              </nav>
-              <motion.p initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}
-                className="text-xs font-bold tracking-[0.2em] text-green-400 uppercase mb-4">
-                WhatsApp Marketing
-              </motion.p>
-              <motion.h1 id="wm-hero-heading" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.1 }}
-                className="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight mb-6 leading-tight">
-                Bulk WhatsApp Marketing for Global Businesses
-              </motion.h1>
-              <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.2 }}
-                className="text-gray-400 text-sm sm:text-base leading-relaxed mb-8">
-                Send bulk WhatsApp messages, run promotional campaigns, and automate customer communication via the official WhatsApp Business API, trusted by 1,000+ businesses worldwide.
-              </motion.p>
-              <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.3 }}
-                className="flex flex-wrap gap-4">
-                <Link to="/contact" className="inline-flex items-center gap-2 px-8 py-3.5 bg-green-600 text-white text-xs font-black tracking-widest hover:bg-green-700 transition-colors">
-                  GET STARTED FREE <ArrowRight className="w-4 h-4" />
-                </Link>
-                <Link to="/contact" className="inline-flex items-center gap-2 px-8 py-3.5 border border-white/30 text-white text-xs font-black tracking-widest hover:border-white/60 transition-colors">
-                  BOOK A DEMO
-                </Link>
-              </motion.div>
-            </div>
-            {/* Right Column: Graphic */}
-            <motion.div 
-              initial={{ opacity: 0, scale: 0.95 }} 
-              animate={{ opacity: 1, scale: 1 }} 
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="lg:col-span-6 flex justify-center"
-            >
-              <div className="relative p-2 bg-white/5 border border-white/10 rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.4)] overflow-hidden max-w-lg lg:max-w-full">
-                <img 
-                  src="/imgs/Services/Whatsapp API Services.png" 
-                  alt="WhatsApp Marketing Services Dashboard" 
-                  className="w-full h-auto object-cover rounded-xl border border-white/5 shadow-inner"
-                />
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
+      <section className="relative pt-0 h-[70vh] min-h-[550px] flex items-end overflow-hidden">
+        <img 
+          src="/imgs/Services/Whatsapp Marketing services.png" 
+          alt="WhatsApp Marketing Dashboard" 
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-black/20" />
+        <div className="absolute top-0 right-0 w-96 h-96 bg-green-600/10 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute bottom-0 left-0 w-72 h-72 bg-indigo-500/5 rounded-full blur-3xl pointer-events-none" />
+        
+        <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-14 z-10">
+          <Link
+            to="/services"
+            className="inline-flex items-center gap-1.5 text-xs font-bold tracking-widest text-white/60 hover:text-white transition-colors mb-6 uppercase"
+          >
+            <ArrowLeft className="w-3.5 h-3.5" /> All Services
+          </Link>
 
-      {/* Stats */}
-      <div className="bg-[#080f1e] border-b border-white/[0.07]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-white/[0.07]">
+          <motion.p
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4 }}
+            className="text-xs font-bold tracking-[0.2em] text-green-400 uppercase mb-3"
+          >
+            WhatsApp Marketing
+          </motion.p>
+          <motion.h1
+            id="wm-hero-heading"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="text-4xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-tight mb-4 max-w-3xl"
+          >
+            Bulk WhatsApp Marketing for Global Businesses
+          </motion.h1>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="text-white/70 text-lg max-w-xl leading-relaxed mb-6"
+          >
+            Send bulk WhatsApp messages, run promotional campaigns, and automate customer communication via the official WhatsApp Business API, trusted by 1,000+ businesses worldwide.
+          </motion.p>
+          
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.3 }}
+            className="flex flex-wrap gap-4 mb-8">
+            <Link to="/contact" className="inline-flex items-center gap-2 px-8 py-3.5 bg-green-600 text-white text-xs font-black tracking-widest hover:bg-green-700 transition-colors">
+              GET STARTED FREE <ArrowRight className="w-4 h-4" />
+            </Link>
+            <Link to="/contact" className="inline-flex items-center gap-2 px-8 py-3.5 border border-white/30 text-white text-xs font-black tracking-widest hover:border-white/60 transition-colors">
+              BOOK A DEMO
+            </Link>
+          </motion.div>
+
+          {/* Stats row */}
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            className="flex flex-wrap gap-8 border-t border-white/10 pt-6"
+          >
             {[
               { v: '98%', l: 'Message Open Rate' },
               { v: '5x', l: 'Higher Engagement vs SMS' },
               { v: '1,000+', l: 'Businesses Served' },
               { v: '24/7', l: 'Campaign Support' },
-            ].map((m) => (
-              <div key={m.l} className="py-5 px-6 text-center">
-                <div className="text-2xl font-extrabold text-white tracking-tight">{m.v}</div>
-                <div className="text-[0.65rem] font-medium text-slate-400 tracking-wider uppercase mt-1">{m.l}</div>
+            ].map((s) => (
+              <div key={s.l}>
+                <div className="text-3xl font-black text-green-400">{s.v}</div>
+                <div className="text-xs text-white/50 tracking-widest uppercase mt-0.5">{s.l}</div>
               </div>
             ))}
-          </div>
+          </motion.div>
         </div>
-      </div>
+      </section>
 
       {/* Features */}
       <section className="py-16 bg-white" aria-labelledby="wm-features-heading">

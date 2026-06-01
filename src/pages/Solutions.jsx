@@ -12,7 +12,7 @@ export const solutionsData = [
     icon: Smartphone,
     title: 'SMS Termination',
     tagline: 'High-delivery A2P messaging via direct carrier routes',
-    heroImg: '/imgs/Solutions/SMS:API Solutions.png',
+    heroImg: '/imgs/Solutions/SMS Termination.png',
     accent: 'text-indigo-500',
     accentBg: 'bg-indigo-500',
     accentLight: 'bg-indigo-50',
