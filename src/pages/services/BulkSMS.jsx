@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { ArrowRight, ArrowLeft, Check, Smartphone, Zap, BarChart3, Shield, Globe, Headphones } from 'lucide-react';
+import { ArrowLeft, Check, Smartphone, Zap, BarChart3, Shield, Globe, Headphones } from 'lucide-react';
 import { fadeInUp, staggerContainer } from '../../lib/utils';
 import SEOMeta from '../../components/shared/SEOMeta';
 import CTASection from '../../components/sections/CTASection';
@@ -129,27 +129,17 @@ export default function BulkSMS() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-white/70 text-lg max-w-xl leading-relaxed mb-6"
+            className="text-white/70 text-lg max-w-xl leading-relaxed"
           >
-            Send transactional SMS, promotional campaigns, and OTPs with carrier-grade reliability, global compliance, and 99%+ delivery rates across all global operators.
+            Carrier-grade bulk SMS delivery for OTPs, transactional notifications, and global marketing campaigns.
           </motion.p>
           
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.3 }}
-            className="flex flex-wrap gap-4 mb-8">
-            <Link to="/contact" className="inline-flex items-center gap-2 px-8 py-3.5 bg-indigo-600 text-white text-xs font-black tracking-widest hover:bg-indigo-700 transition-colors">
-              GET STARTED <ArrowRight className="w-4 h-4" />
-            </Link>
-            <Link to="/pricing" className="inline-flex items-center gap-2 px-8 py-3.5 border border-white/30 text-white text-xs font-black tracking-widest hover:border-white/60 transition-colors">
-              VIEW PRICING
-            </Link>
-          </motion.div>
-
           {/* Stats row */}
           <motion.div
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
-            className="flex flex-wrap gap-8 border-t border-white/10 pt-6"
+            className="flex flex-wrap gap-8 mt-8"
           >
             {[
               { v: '120M+', l: 'SMS Delivered/Month' },
@@ -172,7 +162,7 @@ export default function BulkSMS() {
           <motion.div initial="initial" whileInView="animate" viewport={{ once: true }} variants={fadeInUp} className="text-center mb-12">
             <p className="text-xs font-bold tracking-[0.2em] text-indigo-500 uppercase mb-3">Features</p>
             <h2 id="sms-features-heading" className="text-3xl sm:text-4xl font-black text-gray-900 tracking-tight mb-3">
-              Complete Bulk SMS Platform for Global Outreach
+              Complete Bulk SMS Platform<br />for Global Outreach
             </h2>
             <p className="text-gray-500 text-sm max-w-xl mx-auto">
               Everything your business needs to send SMS campaigns, OTPs, and transactional alerts worldwide, with full compliance support.
@@ -182,8 +172,8 @@ export default function BulkSMS() {
             className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {features.map((f) => (
               <motion.div key={f.title} variants={fadeInUp}
-                className="bg-white border border-gray-100 p-7 hover:shadow-md transition-all duration-300">
-                <div className={`w-12 h-12 ${f.bg} flex items-center justify-center mb-5`}>
+                className="bg-white border border-gray-100 p-7 hover:shadow-md transition-all duration-300 rounded-xl">
+                <div className={`w-12 h-12 ${f.bg} flex items-center justify-center mb-5 rounded-lg`}>
                   <f.icon className={`w-6 h-6 ${f.color}`} />
                 </div>
                 <h3 className="text-base font-black text-gray-900 tracking-tight mb-2">{f.title}</h3>
@@ -200,7 +190,7 @@ export default function BulkSMS() {
           <motion.div initial="initial" whileInView="animate" viewport={{ once: true }} variants={fadeInUp} className="text-center mb-10">
             <p className="text-xs font-bold tracking-[0.2em] text-indigo-500 uppercase mb-3">Industries</p>
             <h2 id="sms-industries-heading" className="text-3xl font-black text-gray-900 tracking-tight">
-              Who Uses Our Bulk SMS Service Worldwide
+              Who Uses Our Bulk SMS<br />Service Worldwide
             </h2>
           </motion.div>
           <motion.div initial="initial" whileInView="animate" viewport={{ once: true }} variants={staggerContainer}
@@ -214,7 +204,7 @@ export default function BulkSMS() {
               { name: 'Real Estate', uses: ['Lead follow-ups', 'Site visit reminders', 'Payment dues'] },
             ].map((ind) => (
               <motion.div key={ind.name} variants={fadeInUp}
-                className="bg-white border border-gray-100 p-6 hover:shadow-sm transition-all duration-300">
+                className="bg-white border border-gray-100 p-6 hover:shadow-sm transition-all duration-300 rounded-xl">
                 <h3 className="text-sm font-black text-gray-900 mb-3">{ind.name}</h3>
                 <ul className="space-y-1.5">
                   {ind.uses.map((u) => (
@@ -235,12 +225,12 @@ export default function BulkSMS() {
           <motion.div initial="initial" whileInView="animate" viewport={{ once: true }} variants={fadeInUp} className="text-center mb-10">
             <p className="text-xs font-bold tracking-[0.2em] text-indigo-500 uppercase mb-3">FAQ</p>
             <h2 id="sms-faq-heading" className="text-3xl font-black text-gray-900 tracking-tight">
-              Bulk SMS Service: Common Questions
+              Bulk SMS Service:<br />Common Questions
             </h2>
           </motion.div>
           <motion.div initial="initial" whileInView="animate" viewport={{ once: true }} variants={staggerContainer} className="space-y-4">
             {faqs.map((faq, i) => (
-              <motion.div key={i} variants={fadeInUp} className="border border-gray-100 border-l-4 border-l-indigo-500 p-6 bg-white">
+              <motion.div key={i} variants={fadeInUp} className="border border-gray-100 border-l-4 border-l-indigo-500 p-6 bg-white rounded-xl overflow-hidden">
                 <h3 className="text-sm font-bold text-gray-900 mb-2">{faq.q}</h3>
                 <p className="text-sm text-gray-600 leading-relaxed">{faq.a}</p>
               </motion.div>
@@ -263,7 +253,7 @@ export default function BulkSMS() {
               { label: 'View Pricing', to: '/pricing' },
             ].map((link) => (
               <Link key={link.label} to={link.to}
-                className="px-4 py-2 text-xs font-semibold text-gray-600 bg-white border border-gray-200 hover:border-indigo-500 hover:text-indigo-600 transition-colors">
+                className="px-4 py-2 text-xs font-semibold text-gray-600 bg-white border border-gray-200 hover:border-indigo-500 hover:text-indigo-600 transition-colors rounded-lg">
                 {link.label}
               </Link>
             ))}

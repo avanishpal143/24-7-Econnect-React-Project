@@ -137,13 +137,13 @@ export default {
       /* ── Border Radius ────────────────────────────────────────────────────── */
       borderRadius: {
         'none': '0',
-        'sm':   '2px',
-        'DEFAULT': '3px',
-        'md':   '4px',
-        'lg':   '6px',
-        'xl':   '8px',
-        '2xl':  '12px',
-        '3xl':  '16px',
+        'sm':   '4px',
+        'DEFAULT': '6px',
+        'md':   '8px',
+        'lg':   '10px',
+        'xl':   '12px',
+        '2xl':  '16px',
+        '3xl':  '20px',
         'full': '9999px',
       },
 

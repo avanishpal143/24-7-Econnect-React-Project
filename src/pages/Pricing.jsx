@@ -161,12 +161,12 @@ export default function Pricing() {
               <motion.div
                 key={plan.name}
                 variants={fadeInUp}
-                className={`relative overflow-hidden ${plan.cardClass} ${plan.featured ? 'md:-mt-4 md:mb-4' : ''}`}
+                className={`relative overflow-hidden rounded-xl ${plan.cardClass} ${plan.featured ? 'md:-mt-4 md:mb-4' : ''}`}
               >
                 <div className={`h-1 w-full ${plan.topBar}`} />
                 {plan.badge && (
                   <div className="absolute top-5 right-5">
-                    <span className="px-2.5 py-1 text-[10px] font-semibold tracking-widest bg-indigo-600 text-white">{plan.badge}</span>
+                    <span className="px-2.5 py-1 text-[10px] font-semibold tracking-widest bg-indigo-600 text-white rounded-md">{plan.badge}</span>
                   </div>
                 )}
                 <div className="p-8">
@@ -200,7 +200,7 @@ export default function Pricing() {
                   </ul>
                   <Link
                     to={plan.link}
-                    className={`flex items-center justify-center gap-2 w-full py-3.5 text-xs font-semibold tracking-wide transition-all duration-200 ${plan.ctaClass}`}
+                    className={`flex items-center justify-center gap-2 w-full py-3.5 text-xs font-semibold tracking-wide transition-all duration-200 rounded-lg ${plan.ctaClass}`}
                     style={{ fontFamily: 'var(--font-display)' }}
                   >
                     {plan.cta} <ArrowRight className="w-4 h-4" />
@@ -216,7 +216,7 @@ export default function Pricing() {
             className="flex flex-wrap justify-center gap-3 mt-10"
           >
             {['No Setup Fees', 'Routing Test Available', '24/7 NOC Support', 'No Lock-in Contracts', 'DLT Compliance Included'].map((b) => (
-              <span key={b} className="flex items-center gap-1.5 text-xs text-slate-500 font-medium bg-white border border-slate-200 px-3 py-1.5">
+              <span key={b} className="flex items-center gap-1.5 text-xs text-slate-500 font-medium bg-white border border-slate-200 px-3 py-1.5 rounded-lg">
                 <span className="w-1.5 h-1.5 rounded-full bg-emerald-600 flex-shrink-0" />{b}
               </span>
             ))}
@@ -247,7 +247,7 @@ export default function Pricing() {
               <motion.div
                 key={faq.q}
                 variants={fadeInUp}
-                className="border border-slate-100 border-l-4 border-l-indigo-600 p-6 bg-white hover:shadow-sm transition-shadow duration-300"
+                className="border border-slate-100 border-l-4 border-l-indigo-600 p-6 bg-white hover:shadow-sm transition-shadow duration-300 rounded-lg"
               >
                 <h3 className="text-sm font-semibold text-slate-900 mb-2 tracking-tight"
                   style={{ fontFamily: 'var(--font-display)' }}>

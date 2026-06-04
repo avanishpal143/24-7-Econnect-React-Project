@@ -79,7 +79,7 @@ export default function Testimonials() {
             <motion.div
               key={t.name}
               variants={item}
-              className={`group text-center bg-white border border-gray-100 border-t-4 ${t.topColor} hover:shadow-md transition-all duration-300 p-6`}
+              className={`group text-center bg-white border border-gray-100 border-t-4 ${t.topColor} hover:shadow-md transition-all duration-300 p-6 rounded-xl`}
             >
               <div className="rounded-full overflow-hidden mx-auto mb-4 ring-2 ring-gray-100 group-hover:ring-indigo-100 transition-all"
                 style={{ width: 72, height: 72 }}>

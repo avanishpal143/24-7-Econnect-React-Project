@@ -8,6 +8,8 @@ import { articles } from '../data/blogArticles';
 
 const categories = ['All', 'A2P Messaging', 'OTP Delivery', 'DLT Compliance', 'Infrastructure'];
 
+const MotionLink = motion(Link);
+
 export default function Blog() {
   const location = useLocation();
   const [activeCategory, setActiveCategory] = useState('All');
@@ -74,7 +76,7 @@ export default function Blog() {
               <button
                 key={cat}
                 onClick={() => setActiveCategory(cat)}
-                className={`px-4 py-2 text-xs font-semibold tracking-wide border transition-all duration-200 ${
+                className={`px-4 py-2 text-xs font-semibold tracking-wide border transition-all duration-200 rounded-lg ${
                   activeCategory === cat
                     ? 'bg-slate-900 text-white border-slate-900 shadow-sm'
                     : 'bg-white text-slate-500 border-slate-200 hover:border-slate-400 hover:text-slate-800'
@@ -88,7 +90,7 @@ export default function Blog() {
 
           {/* Article grid */}
           {filteredArticles.length === 0 ? (
-            <div className="text-center py-12 border border-dashed border-slate-250 bg-slate-50">
+            <div className="text-center py-12 border border-dashed border-slate-250 bg-slate-50 rounded-xl">
               <p className="text-slate-500 text-sm font-semibold">No articles found in this category.</p>
             </div>
           ) : (
@@ -97,10 +99,11 @@ export default function Blog() {
               className="grid sm:grid-cols-2 lg:grid-cols-2 gap-8"
             >
               {filteredArticles.map((article) => (
-                <motion.article
+                <MotionLink
                   key={article.slug}
+                  to={`/blog/${article.slug}`}
                   variants={fadeInUp}
-                  className={`group bg-white border border-slate-100 border-t-4 ${article.border} hover:shadow-md transition-all duration-300 overflow-hidden`}
+                  className={`group block bg-white border border-slate-100 border-t-4 ${article.border} hover:shadow-md transition-all duration-300 overflow-hidden rounded-xl`}
                 >
                   {/* Image */}
                   <div className="h-52 overflow-hidden">
@@ -115,7 +118,7 @@ export default function Blog() {
                   <div className="p-7">
                     {/* Tag + meta */}
                     <div className="flex items-center justify-between mb-4">
-                      <span className={`text-[10px] font-semibold tracking-[0.18em] uppercase px-2.5 py-1 ${article.tagBg} ${article.tagColor}`}>
+                      <span className={`text-[10px] font-semibold tracking-[0.18em] uppercase px-2.5 py-1 rounded-md ${article.tagBg} ${article.tagColor}`}>
                         {article.tag}
                       </span>
                       <div className="flex items-center gap-3 text-xs text-slate-400">
@@ -147,7 +150,7 @@ export default function Blog() {
                       {article.topics.map((t) => (
                         <span
                           key={t}
-                          className="flex items-center gap-1 text-[10px] text-slate-500 bg-slate-50 border border-slate-200 px-2 py-0.5"
+                          className="flex items-center gap-1 text-[10px] text-slate-500 bg-slate-50 border border-slate-200 px-2 py-0.5 rounded-md"
                           style={{ fontFamily: 'var(--font-body)' }}
                         >
                           <Tag className="w-2.5 h-2.5" /> {t}
@@ -156,16 +159,15 @@ export default function Blog() {
                     </div>
 
                     {/* Read more */}
-                    <Link
-                      to={`/blog/${article.slug}`}
+                    <div
                       className={`inline-flex items-center gap-1.5 text-xs font-semibold tracking-wide ${article.tagColor} hover:opacity-70 transition-opacity group/link`}
                       style={{ fontFamily: 'var(--font-display)' }}
                     >
                       Read Article
                       <ArrowRight className="w-3.5 h-3.5 group-hover/link:translate-x-1 transition-transform" />
-                    </Link>
+                    </div>
                   </div>
-                </motion.article>
+                </MotionLink>
               ))}
             </motion.div>
           )}
@@ -197,7 +199,7 @@ export default function Blog() {
               <motion.div key={topic.title} variants={fadeInUp}>
                 <Link
                   to={topic.link}
-                  className="group flex flex-col h-full bg-white border border-slate-200 p-5 hover:border-indigo-600 hover:shadow-sm transition-all duration-200"
+                  className="group flex flex-col h-full bg-white border border-slate-200 p-5 hover:border-indigo-600 hover:shadow-sm transition-all duration-200 rounded-xl"
                 >
                   <h3
                     className="text-sm font-semibold text-slate-900 mb-2 group-hover:text-indigo-700 transition-colors"

@@ -302,7 +302,7 @@ export default function Solutions() {
                 SMS termination, OTP delivery, voice routing, bulk messaging, SMPP/API connectivity, and compliance support, all on one carrier-grade platform.
               </motion.p>
               <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.3 }}>
-                <Link to="/contact" className="inline-flex items-center gap-2 px-8 py-3.5 bg-indigo-600 text-white text-xs font-black tracking-widest hover:bg-indigo-700 transition-colors">
+                <Link to="/contact" className="inline-flex items-center gap-2 px-8 py-3.5 bg-indigo-600 text-white text-xs font-black tracking-widest hover:bg-indigo-700 transition-colors rounded-lg">
                   REQUEST ROUTING TEST <ArrowRight className="w-4 h-4" />
                 </Link>
               </motion.div>
@@ -340,7 +340,7 @@ export default function Solutions() {
               <motion.div
                 key={sol.slug}
                 variants={fadeInUp}
-                className={`group bg-white border border-gray-100 border-t-4 ${sol.border} hover:shadow-md transition-all duration-300 overflow-hidden`}
+                className={`group bg-white border border-gray-100 border-t-4 ${sol.border} hover:shadow-md transition-all duration-300 overflow-hidden rounded-xl`}
               >
                 {/* Image */}
                 <div className="h-44 overflow-hidden">
@@ -380,7 +380,7 @@ export default function Solutions() {
 
                   <Link
                     to={`/solutions/${sol.slug}`}
-                    className={`inline-flex items-center gap-1.5 text-xs font-black tracking-widest border-2 px-4 py-2 transition-all duration-200 ${sol.btn}`}
+                    className={`inline-flex items-center gap-1.5 text-xs font-black tracking-widest border-2 px-4 py-2 transition-all duration-200 rounded-lg ${sol.btn}`}
                   >
                     LEARN MORE <ArrowRight className="w-3.5 h-3.5" />
                   </Link>

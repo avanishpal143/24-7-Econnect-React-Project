@@ -7,12 +7,13 @@ export default function ESimFooter() {
       <div className="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-4 gap-10">
         {/* Brand */}
         <div className="space-y-4">
-          <div className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-500 to-cyan-400 flex items-center justify-center">
-              <Wifi className="w-4 h-4 text-white" />
-            </div>
-            <span className="text-white font-bold text-lg">EConnect eSIM</span>
-          </div>
+          <Link to="/" className="inline-block">
+            <img
+              src="/Screenshot_2026-06-04_at_1.49.15_PM-removebg-preview.png"
+              alt="EConnect"
+              className="h-8 w-auto object-contain hover:scale-105 transition-all duration-300"
+            />
+          </Link>
           <p className="text-white/50 text-sm leading-relaxed">
             Stay connected globally with instant eSIM activation for 190+ countries. No physical SIM required.
           </p>
@@ -75,7 +76,9 @@ export default function ESimFooter() {
             <li className="flex items-start gap-2">
               <MapPin className="w-4 h-4 mt-0.5 text-cyan-400 shrink-0" />
               <span className="text-white/70">
-                1007, Aggarwal millenium tower 1, Netaji Subhash Place, Delhi 110034
+                1007, Aggarwal Millenium Tower 1,
+                <br />
+                Netaji Subhash Place, Delhi 110034
               </span>
             </li>
             <li className="flex items-start gap-2">

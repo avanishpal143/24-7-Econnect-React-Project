@@ -2,11 +2,6 @@ import { Link } from 'react-router-dom';
 import { Mail, Phone, MapPin } from 'lucide-react';
 
 // Social icons as inline SVGs (brand icons not in this lucide-react version)
-const XIcon = ({ className }) => (
-  <svg className={className} viewBox="0 0 24 24" fill="currentColor">
-    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.253 5.622 5.911-5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-  </svg>
-);
 const LinkedInIcon = ({ className }) => (
   <svg className={className} viewBox="0 0 24 24" fill="currentColor">
     <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
@@ -24,6 +19,12 @@ const InstagramIcon = ({ className }) => (
 );
 
 const footerLinks = {
+  Services: [
+    { name: 'Bulk SMS', href: '/services/bulk-sms' },
+    { name: 'Voice Call', href: '/services/voice-call' },
+    { name: 'WhatsApp API', href: '/services/whatsapp-api' },
+    { name: 'WhatsApp Marketing', href: '/services/whatsapp-marketing' },
+  ],
   Solutions: [
     { name: 'SMS Termination', href: '/solutions/sms-termination' },
     { name: 'OTP Messaging', href: '/solutions/otp-messaging' },
@@ -51,7 +52,6 @@ const footerLinks = {
 };
 
 const socialLinks = [
-  { icon: XIcon, href: '#', label: 'X (Twitter)' },
   { icon: LinkedInIcon, href: '#', label: 'LinkedIn' },
   { icon: FacebookIcon, href: '#', label: 'Facebook' },
   { icon: InstagramIcon, href: '#', label: 'Instagram' },
@@ -59,15 +59,15 @@ const socialLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-gradient-to-b from-[#0b1329] to-[#040712] text-white border-t border-white/[0.04]">
+    <footer className="bg-gradient-to-b from-slate-900 to-slate-800 text-white border-t border-white/[0.04]">
       <div className="max-w-7xl mx-auto px-6 lg:px-8 pt-16 pb-8">
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 lg:gap-10 mb-12">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 lg:gap-6 mb-12">
 
           {/* Brand column */}
           <div className="col-span-2 lg:col-span-2">
             <Link to="/" className="inline-block mb-6">
               <img
-                src="/logo-white.png"
+                src="/Screenshot_2026-06-04_at_1.49.15_PM-removebg-preview.png"
                 alt="EConnect"
                 className="h-8 w-auto object-contain drop-shadow-[0_2px_12px_rgba(99,102,241,0.5)] hover:scale-105 transition-all duration-300"
               />
@@ -85,13 +85,13 @@ export default function Footer() {
                 <Mail className="w-4 h-4 flex-shrink-0 text-indigo-400" />
                 sales@24x7econnect.com
               </a>
-              <a href="mailto:dispute@24x7econnect.com" className="flex items-center gap-3 text-sm text-slate-200 hover:text-indigo-400 transition-colors">
-                <Mail className="w-4 h-4 flex-shrink-0 text-amber-400" />
-                dispute@24x7econnect.com
-              </a>
               <div className="flex items-start gap-3 text-sm text-slate-200">
                 <MapPin className="w-4 h-4 flex-shrink-0 text-indigo-400 mt-0.5" />
-                1007, Aggarwal millenium tower 1, Netaji Subhash Place, Delhi 110034
+                <span>
+                  1007, Aggarwal Millenium Tower 1,
+                  <br />
+                  Netaji Subhash Place, Delhi 110034
+                </span>
               </div>
             </div>
             {/* Company registration */}
@@ -139,10 +139,6 @@ export default function Footer() {
             <p>&copy; {new Date().getFullYear()} 24x7 EConnect Pvt. Ltd. All rights reserved.</p>
             <span className="hidden sm:inline text-white/15">|</span>
             <Link to="/blog" className="hover:text-indigo-400 transition-colors">Blog</Link>
-            <span className="hidden sm:inline text-white/15">|</span>
-            <a href="mailto:sales@24x7econnect.com" className="hover:text-indigo-400 transition-colors">Support</a>
-            <span className="hidden sm:inline text-white/15">|</span>
-            <a href="mailto:dispute@24x7econnect.com" className="hover:text-indigo-400 transition-colors">Dispute Report</a>
           </div>
           <div className="flex items-center gap-3">
             {socialLinks.map((s) => (
@@ -152,7 +148,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={s.label}
-                className="w-8 h-8 flex items-center justify-center border border-white/15 text-slate-400 hover:border-indigo-400 hover:text-indigo-400 transition-all"
+                className="w-8 h-8 flex items-center justify-center border border-white/15 text-slate-400 hover:border-indigo-400 hover:text-indigo-400 transition-all rounded-lg"
               >
                 <s.icon className="w-3.5 h-3.5" />
               </a>

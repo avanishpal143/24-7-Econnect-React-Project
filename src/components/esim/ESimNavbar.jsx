@@ -63,9 +63,6 @@ export default function ESimNavbar() {
               alt="EConnect"
               className="h-8 w-auto object-contain"
             />
-            <div className="flex flex-col leading-none border-l border-slate-200 pl-2.5 ml-1">
-              <span className="text-indigo-600 text-[10px] font-semibold tracking-[0.15em] uppercase mt-1">eSIM</span>
-            </div>
           </Link>
 
           {/* Desktop links */}
@@ -87,7 +84,7 @@ export default function ESimNavbar() {
           <div className="hidden lg:flex items-center gap-3">
             <Link
               to="/"
-              className="text-xs font-medium text-slate-600 hover:text-slate-900 transition-colors"
+              className="text-xs font-bold bg-indigo-50 border border-indigo-200 text-indigo-600 hover:bg-indigo-600 hover:text-white hover:border-indigo-600 rounded-lg px-4 py-2 transition-all duration-200"
             >
               Main Site
             </Link>
@@ -132,7 +129,13 @@ export default function ESimNavbar() {
                   {link.label}
                 </button>
               ))}
-              <div className="pt-3 pb-1">
+              <div className="pt-3 pb-1 space-y-2">
+                <Link
+                  to="/"
+                  className="block w-full text-center py-3 text-sm font-bold bg-indigo-50 border border-indigo-200 text-indigo-600 hover:bg-indigo-600 hover:text-white hover:border-indigo-600 rounded-lg transition-colors"
+                >
+                  Main Site
+                </Link>
                 <button
                   onClick={() => scrollTo('#cta')}
                   className="w-full py-3 text-sm font-bold text-white bg-indigo-600 hover:bg-indigo-700 transition-colors rounded-lg"

@@ -88,10 +88,10 @@ export default function About() {
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.3 }}
             className="flex flex-wrap justify-center gap-4"
           >
-            <Link to="/contact" className="inline-flex items-center gap-2 px-8 py-3.5 bg-indigo-600 text-white text-xs font-black tracking-widest hover:bg-indigo-700 transition-colors">
+            <Link to="/contact" className="inline-flex items-center gap-2 px-8 py-3.5 bg-indigo-600 text-white text-xs font-black tracking-widest hover:bg-indigo-700 transition-colors rounded-lg">
               TALK TO AN ENGINEER <ArrowRight className="w-4 h-4" />
             </Link>
-            <Link to="/services" className="inline-flex items-center gap-2 px-8 py-3.5 border border-white/30 text-white text-xs font-black tracking-widest hover:border-white/60 transition-colors">
+            <Link to="/services" className="inline-flex items-center gap-2 px-8 py-3.5 border border-white/30 text-white text-xs font-black tracking-widest hover:border-white/60 transition-colors rounded-lg">
               EXPLORE SERVICES
             </Link>
           </motion.div>
@@ -108,7 +108,7 @@ export default function About() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className={`bg-white border border-gray-100 border-t-4 ${val.border} p-8 hover:shadow-md transition-all duration-300`}
+                className={`bg-white border border-gray-100 border-t-4 ${val.border} p-8 hover:shadow-md transition-all duration-300 rounded-xl`}
               >
                 <div className={`w-12 h-12 ${val.bg} flex items-center justify-center mb-5`}>
                   <val.icon className={`w-6 h-6 ${val.color}`} />
@@ -158,7 +158,7 @@ export default function About() {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  className="bg-white border border-gray-100 p-6 hover:border-gray-200 transition-all duration-300"
+                  className="bg-white border border-gray-100 p-6 hover:border-gray-200 transition-all duration-300 rounded-xl"
                 >
                   <div className={`w-10 h-10 ${str.bg} flex items-center justify-center mb-4`}>
                     <str.icon className={`w-5 h-5 ${str.color}`} />
@@ -191,7 +191,7 @@ export default function About() {
                 { v: '120M+', l: 'Monthly Volume', c: 'text-sky-600', b: 'bg-sky-50' },
                 { v: '99.95%', l: 'Guaranteed Uptime', c: 'text-rose-600', b: 'bg-rose-50' },
               ].map((stat) => (
-                <div key={stat.l} className="p-6 bg-gray-50 border border-gray-100 text-center">
+                <div key={stat.l} className="p-6 bg-gray-50 border border-gray-100 text-center rounded-xl">
                   <div className={`text-3xl font-black ${stat.c} mb-1 tracking-tight`}>{stat.v}</div>
                   <div className="text-[10px] text-gray-500 tracking-widest uppercase font-semibold">{stat.l}</div>
                 </div>
@@ -252,7 +252,7 @@ export default function About() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.05 }}
-                className="bg-white border border-gray-100 p-5 hover:shadow-sm transition-all duration-300"
+                className="bg-white border border-gray-100 p-5 hover:shadow-sm transition-all duration-300 rounded-xl"
               >
                 <div className="w-7 h-7 rounded-full bg-indigo-50 flex items-center justify-center mb-4">
                   <CheckCircle2 className="w-4 h-4 text-indigo-600" />
@@ -352,7 +352,7 @@ export default function About() {
               <p className="text-xs text-slate-400 leading-relaxed mb-6 max-w-xs mx-auto">
                 Speak directly with a telecom routing engineer. No bots, no generic replies.
               </p>
-              <Link to="/contact" className="inline-flex items-center justify-center gap-2 w-full py-3.5 bg-indigo-600 text-white text-xs font-bold tracking-wider hover:bg-indigo-500 transition-colors uppercase">
+              <Link to="/contact" className="inline-flex items-center justify-center gap-2 w-full py-3.5 bg-indigo-600 text-white text-xs font-bold tracking-wider hover:bg-indigo-500 transition-colors uppercase rounded-lg">
                 Contact Support <ArrowRight className="w-4 h-4" />
               </Link>
             </motion.div>

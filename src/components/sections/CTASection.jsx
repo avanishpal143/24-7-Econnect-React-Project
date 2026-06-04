@@ -51,8 +51,8 @@ export default function CTASection() {
                 { icon: MessageCircle, href: 'https://wa.me/918287936724',       label: 'WhatsApp', value: 'Chat with us now',         bg: 'bg-emerald-50', ic: 'text-emerald-700', hover: 'group-hover:text-emerald-700', external: true },
               ].map((c) => {
                 const inner = (
-                  <div className="flex items-center gap-4 p-4 bg-white border border-slate-200 hover:border-slate-300 hover:shadow-sm transition-all duration-200 group">
-                    <div className={`w-10 h-10 ${c.bg} flex items-center justify-center flex-shrink-0`}>
+                  <div className="flex items-center gap-4 p-4 bg-white border border-slate-200 hover:border-slate-300 hover:shadow-sm transition-all duration-200 group rounded-xl">
+                    <div className={`w-10 h-10 ${c.bg} flex items-center justify-center flex-shrink-0 rounded-lg`}>
                       <c.icon className={`w-4.5 h-4.5 ${c.ic}`} />
                     </div>
                     <div>
@@ -76,7 +76,7 @@ export default function CTASection() {
             {/* Trust badges */}
             <div className="flex flex-wrap gap-2">
               {trustBadges.map((b) => (
-                <span key={b} className="flex items-center gap-1.5 text-xs text-slate-500 font-medium bg-white border border-slate-200 px-3 py-1.5">
+                <span key={b} className="flex items-center gap-1.5 text-xs text-slate-500 font-medium bg-white border border-slate-200 px-3 py-1.5 rounded-lg">
                   <span className="w-1.5 h-1.5 rounded-full bg-emerald-600 flex-shrink-0" />
                   {b}
                 </span>
@@ -90,7 +90,7 @@ export default function CTASection() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
-            className="relative overflow-hidden bg-slate-900 p-10"
+            className="relative overflow-hidden bg-slate-900 p-10 rounded-xl"
           >
             {/* Subtle gradient accents */}
             <div className="absolute top-0 right-0 w-72 h-72 bg-indigo-800/20 rounded-full blur-3xl pointer-events-none" />
@@ -111,14 +111,14 @@ export default function CTASection() {
 
               <Link
                 to="/contact"
-                className="flex items-center justify-center gap-2 w-full py-3.5 bg-indigo-600 text-white text-xs font-bold tracking-wide shadow-[0_0_24px_rgba(79,70,229,0.3)] hover:shadow-lg hover:bg-indigo-500 hover:scale-[1.02] transition-all duration-300 mb-3 rounded-sm"
+                className="flex items-center justify-center gap-2 w-full py-3.5 bg-indigo-600 text-white text-xs font-bold tracking-wide shadow-[0_0_24px_rgba(79,70,229,0.3)] hover:shadow-lg hover:bg-indigo-500 hover:scale-[1.02] transition-all duration-300 mb-3 rounded-lg"
                 style={{ fontFamily: 'var(--font-display)' }}
               >
                 REQUEST ROUTING TEST <ArrowRight className="w-4 h-4" />
               </Link>
               <Link
                 to="/contact"
-                className="flex items-center justify-center gap-2 w-full py-3.5 border border-white/20 text-white text-xs font-bold tracking-wide hover:bg-white/10 hover:border-white/50 hover:scale-[1.02] transition-all duration-300 rounded-sm"
+                className="flex items-center justify-center gap-2 w-full py-3.5 border border-white/20 text-white text-xs font-bold tracking-wide hover:bg-white/10 hover:border-white/50 hover:scale-[1.02] transition-all duration-300 rounded-lg"
                 style={{ fontFamily: 'var(--font-display)' }}
               >
                 CONTACT SALES

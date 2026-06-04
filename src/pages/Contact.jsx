@@ -101,7 +101,7 @@ const contactMethods = [
 ];
 
 const inputClass =
-  'w-full border border-gray-200 bg-white px-4 py-3 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500/20 transition-all duration-200';
+  'w-full border border-gray-200 bg-white px-4 py-3 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500/20 transition-all duration-200 rounded-lg';
 
 const labelClass = 'block text-[11px] font-bold text-gray-600 tracking-[0.12em] uppercase mb-1.5';
 
@@ -206,7 +206,7 @@ export default function Contact() {
                   href={c.href}
                   target={c.external ? '_blank' : undefined}
                   rel={c.external ? 'noopener noreferrer' : undefined}
-                  className={`group flex flex-col h-full bg-white border border-gray-100 border-t-4 ${c.borderColor} p-6 hover:shadow-md transition-all duration-300`}
+                  className={`group flex flex-col h-full bg-white border border-gray-100 border-t-4 ${c.borderColor} p-6 hover:shadow-md transition-all duration-300 rounded-xl`}
                 >
                   {/* Badge + icon row */}
                   <div className="flex items-center justify-between mb-5">
@@ -252,7 +252,7 @@ export default function Contact() {
               className="lg:col-span-2 space-y-6"
             >
               {/* Response Times */}
-              <motion.div variants={fadeInUp} className="bg-white border border-gray-100 overflow-hidden">
+              <motion.div variants={fadeInUp} className="bg-white border border-gray-100 overflow-hidden rounded-xl">
                 <div className="px-6 py-5 border-b border-gray-100 flex items-center gap-2">
                   <Clock className="w-4 h-4 text-indigo-500" />
                   <h3 className="text-xs font-black tracking-[0.2em] text-gray-900 uppercase">Expected Response Times</h3>
@@ -271,9 +271,9 @@ export default function Contact() {
               </motion.div>
 
               {/* Office Address */}
-              <motion.div variants={fadeInUp} className="bg-white border border-gray-100 p-6">
+              <motion.div variants={fadeInUp} className="bg-white border border-gray-100 p-6 rounded-xl">
                 <div className="flex items-start gap-3 mb-5">
-                  <div className="w-10 h-10 bg-indigo-50 flex items-center justify-center flex-shrink-0">
+                  <div className="w-10 h-10 bg-indigo-50 flex items-center justify-center flex-shrink-0 rounded-lg">
                     <MapPin className="w-5 h-5 text-indigo-600" />
                   </div>
                   <div>
@@ -284,7 +284,7 @@ export default function Contact() {
                   </div>
                 </div>
                 {/* Stylised map placeholder */}
-                <div className="w-full h-36 bg-gray-100 border border-gray-200 flex flex-col items-center justify-center gap-2 relative overflow-hidden">
+                <div className="w-full h-36 bg-gray-100 border border-gray-200 flex flex-col items-center justify-center gap-2 relative overflow-hidden rounded-xl">
                   <div className="absolute inset-0 opacity-10"
                     style={{ backgroundImage: 'linear-gradient(#6366f1 1px, transparent 1px), linear-gradient(90deg, #6366f1 1px, transparent 1px)', backgroundSize: '20px 20px' }}
                   />
@@ -302,12 +302,12 @@ export default function Contact() {
               </motion.div>
 
               {/* Quick links */}
-              <motion.div variants={fadeInUp} className="bg-gray-900 p-6">
+              <motion.div variants={fadeInUp} className="bg-gray-900 p-6 rounded-xl">
                 <p className="text-xs font-black tracking-[0.2em] text-gray-400 uppercase mb-4">Quick Actions</p>
                 <div className="space-y-2.5">
                   <a
                     href="tel:+918287936724"
-                    className="flex items-center justify-between w-full px-4 py-3 bg-white/5 border border-white/10 text-white text-xs font-semibold hover:bg-white/10 transition-colors group"
+                    className="flex items-center justify-between w-full px-4 py-3 bg-white/5 border border-white/10 text-white text-xs font-semibold hover:bg-white/10 transition-colors group rounded-lg"
                   >
                     <span className="flex items-center gap-2">
                       <Phone className="w-3.5 h-3.5 text-indigo-400" /> Call Sales
@@ -318,7 +318,7 @@ export default function Contact() {
                     href="https://wa.me/918287936724"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center justify-between w-full px-4 py-3 bg-white/5 border border-white/10 text-white text-xs font-semibold hover:bg-white/10 transition-colors group"
+                    className="flex items-center justify-between w-full px-4 py-3 bg-white/5 border border-white/10 text-white text-xs font-semibold hover:bg-white/10 transition-colors group rounded-lg"
                   >
                     <span className="flex items-center gap-2">
                       <MessageCircle className="w-3.5 h-3.5 text-emerald-400" /> WhatsApp Chat
@@ -327,7 +327,7 @@ export default function Contact() {
                   </a>
                   <a
                     href="mailto:sales@24x7econnect.com"
-                    className="flex items-center justify-between w-full px-4 py-3 bg-white/5 border border-white/10 text-white text-xs font-semibold hover:bg-white/10 transition-colors group"
+                    className="flex items-center justify-between w-full px-4 py-3 bg-white/5 border border-white/10 text-white text-xs font-semibold hover:bg-white/10 transition-colors group rounded-lg"
                   >
                     <span className="flex items-center gap-2">
                       <Mail className="w-3.5 h-3.5 text-sky-400" /> Email Support
@@ -336,7 +336,7 @@ export default function Contact() {
                   </a>
                   <a
                     href="mailto:dispute@24x7econnect.com"
-                    className="flex items-center justify-between w-full px-4 py-3 bg-white/5 border border-white/10 text-white text-xs font-semibold hover:bg-white/10 transition-colors group"
+                    className="flex items-center justify-between w-full px-4 py-3 bg-white/5 border border-white/10 text-white text-xs font-semibold hover:bg-white/10 transition-colors group rounded-lg"
                   >
                     <span className="flex items-center gap-2">
                       <AlertTriangle className="w-3.5 h-3.5 text-amber-400" /> Dispute Report
@@ -355,7 +355,7 @@ export default function Contact() {
               transition={{ duration: 0.5 }}
               className="lg:col-span-3"
             >
-              <div className="bg-white border border-gray-200">
+              <div className="bg-white border border-gray-200 rounded-xl overflow-hidden">
                 {/* Form header */}
                 <div className="px-8 py-6 border-b border-gray-100">
                   <p className="text-xs font-bold tracking-[0.25em] text-indigo-500 uppercase mb-1">Business Inquiry</p>
@@ -492,7 +492,7 @@ export default function Contact() {
                           {contactMethods.map((m) => (
                             <label
                               key={m.value}
-                              className={`flex items-center gap-2 px-4 py-2.5 border cursor-pointer transition-all duration-200 text-sm font-medium select-none ${
+                              className={`flex items-center gap-2 px-4 py-2.5 border cursor-pointer transition-all duration-200 text-sm font-medium select-none rounded-lg ${
                                 form.contactMethod === m.value
                                   ? 'border-indigo-500 bg-indigo-50 text-indigo-700'
                                   : 'border-gray-200 text-gray-600 hover:border-gray-400'
@@ -532,7 +532,7 @@ export default function Contact() {
                       <button
                         type="submit"
                         disabled={loading}
-                        className="w-full py-4 bg-gray-900 text-white text-xs font-black tracking-[0.2em] hover:bg-gray-800 active:bg-black transition-colors duration-200 disabled:opacity-60 disabled:cursor-not-allowed flex items-center justify-center gap-2.5"
+                        className="w-full py-4 bg-gray-900 text-white text-xs font-black tracking-[0.2em] hover:bg-gray-800 active:bg-black transition-colors duration-200 disabled:opacity-60 disabled:cursor-not-allowed flex items-center justify-center gap-2.5 rounded-lg"
                       >
                         {loading ? (
                           <>

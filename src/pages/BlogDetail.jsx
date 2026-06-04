@@ -14,11 +14,7 @@ const Linkedin = ({ className }) => (
   </svg>
 );
 
-const Twitter = ({ className }) => (
-  <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />
-  </svg>
-);
+
 
 export default function BlogDetail() {
   const { slug } = useParams();
@@ -36,9 +32,7 @@ export default function BlogDetail() {
     const url = window.location.href;
     const text = `Read "${article.title}" by EConnect`;
     
-    if (platform === 'twitter') {
-      window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`, '_blank');
-    } else if (platform === 'linkedin') {
+    if (platform === 'linkedin') {
       window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`, '_blank');
     } else if (platform === 'whatsapp') {
       window.open(`https://wa.me/?text=${encodeURIComponent(text + ' ' + url)}`, '_blank');
@@ -68,7 +62,7 @@ export default function BlogDetail() {
           </Link>
 
           <div className="flex flex-wrap items-center gap-3 mb-4">
-            <span className={`text-[10px] font-bold tracking-[0.18em] uppercase px-2.5 py-1 ${article.tagBg} ${article.tagColor}`}>
+            <span className={`text-[10px] font-bold tracking-[0.18em] uppercase px-2.5 py-1 rounded-md ${article.tagBg} ${article.tagColor}`}>
               {article.tag}
             </span>
             <div className="flex items-center gap-3 text-xs text-slate-400">
@@ -103,7 +97,7 @@ export default function BlogDetail() {
       {/* Featured Image */}
       <section className="relative bg-white py-6">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="w-full aspect-[21/9] min-h-[300px] overflow-hidden shadow-md">
+          <div className="w-full aspect-[21/9] min-h-[300px] overflow-hidden shadow-md rounded-xl">
             <img
               src={article.img}
               alt={article.title}
@@ -182,7 +176,7 @@ export default function BlogDetail() {
                       return (
                         <div
                           key={index}
-                          className="my-8 p-6 border-l-4 border-indigo-600 bg-indigo-50/50 text-slate-700 italic text-base sm:text-lg rounded-r"
+                          className="my-8 p-6 border-l-4 border-indigo-600 bg-indigo-50/50 text-slate-700 italic text-base sm:text-lg rounded-r-lg"
                         >
                           "{block.text}"
                         </div>
@@ -199,7 +193,7 @@ export default function BlogDetail() {
                   {article.topics.map((topic) => (
                     <span
                       key={topic}
-                      className="inline-flex items-center gap-1 text-xs text-slate-500 bg-slate-50 border border-slate-200 px-3 py-1"
+                      className="inline-flex items-center gap-1 text-xs text-slate-500 bg-slate-50 border border-slate-200 px-3 py-1 rounded-md"
                       style={{ fontFamily: 'var(--font-body)' }}
                     >
                       <Tag className="w-3 h-3 text-slate-400" /> {topic}
@@ -211,21 +205,15 @@ export default function BlogDetail() {
                   <span className="text-xs font-semibold text-slate-400 uppercase tracking-wide">Share:</span>
                   <button
                     onClick={() => handleShare('linkedin')}
-                    className="p-2 rounded bg-slate-100 text-slate-600 hover:bg-indigo-50 hover:text-indigo-600 transition-colors"
+                    className="p-2 rounded-lg bg-slate-100 text-slate-600 hover:bg-indigo-50 hover:text-indigo-600 transition-colors"
                     title="Share on LinkedIn"
                   >
                     <Linkedin className="w-4 h-4" />
                   </button>
-                  <button
-                    onClick={() => handleShare('twitter')}
-                    className="p-2 rounded bg-slate-100 text-slate-600 hover:bg-indigo-50 hover:text-indigo-600 transition-colors"
-                    title="Share on Twitter"
-                  >
-                    <Twitter className="w-4 h-4" />
-                  </button>
+
                   <button
                     onClick={() => handleShare('whatsapp')}
-                    className="p-2 rounded bg-slate-100 text-slate-600 hover:bg-emerald-50 hover:text-emerald-600 transition-colors"
+                    className="p-2 rounded-lg bg-slate-100 text-slate-600 hover:bg-emerald-50 hover:text-emerald-600 transition-colors"
                     title="Share on WhatsApp"
                   >
                     <Share2 className="w-4 h-4" />
@@ -238,7 +226,7 @@ export default function BlogDetail() {
             <div className="space-y-8">
               
               {/* Category list / Quick navigation */}
-              <div className="border border-slate-150 p-6 bg-white shadow-sm">
+              <div className="border border-slate-150 p-6 bg-white shadow-sm rounded-xl">
                 <h3 className="text-xs font-bold tracking-[0.2em] text-slate-900 uppercase mb-4">Telecom Topics</h3>
                 <div className="flex flex-col gap-2">
                   {['A2P Messaging', 'OTP Delivery', 'DLT Compliance', 'Infrastructure'].map((cat) => (
@@ -246,7 +234,7 @@ export default function BlogDetail() {
                       key={cat}
                       to="/blog"
                       state={{ category: cat }}
-                      className="px-3 py-2 text-xs font-medium text-slate-600 bg-slate-50 hover:bg-indigo-50 hover:text-indigo-600 hover:border-indigo-200 transition-colors border border-slate-200 block"
+                      className="px-3 py-2 text-xs font-medium text-slate-600 bg-slate-50 hover:bg-indigo-50 hover:text-indigo-600 hover:border-indigo-200 transition-colors border border-slate-200 block rounded-lg"
                     >
                       {cat}
                     </Link>
@@ -255,7 +243,7 @@ export default function BlogDetail() {
               </div>
 
               {/* Related posts */}
-              <div className="border border-slate-150 p-6 bg-white shadow-sm">
+              <div className="border border-slate-150 p-6 bg-white shadow-sm rounded-xl">
                 <h3 className="text-xs font-bold tracking-[0.2em] text-slate-900 uppercase mb-5">Recent Articles</h3>
                 <div className="space-y-5">
                   {otherArticles.map((other) => (
@@ -277,8 +265,8 @@ export default function BlogDetail() {
               </div>
 
               {/* Enterprise CTA Card */}
-              <div className="bg-slate-900 p-6 shadow-sm border border-slate-800">
-                <div className="w-10 h-10 bg-indigo-950 flex items-center justify-center border border-indigo-900/50 mb-4">
+              <div className="bg-slate-900 p-6 shadow-sm border border-slate-800 rounded-xl">
+                <div className="w-10 h-10 bg-indigo-950 flex items-center justify-center border border-indigo-900/50 mb-4 rounded-lg">
                   <Tag className="w-5 h-5 text-indigo-400" />
                 </div>
                 <h3 className="text-sm font-bold text-white mb-2" style={{ fontFamily: 'var(--font-display)' }}>
@@ -289,13 +277,13 @@ export default function BlogDetail() {
                 </p>
                 <Link
                   to="/contact"
-                  className="flex items-center justify-center gap-2 w-full py-3 bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-bold tracking-widest transition-colors mb-2.5"
+                  className="flex items-center justify-center gap-2 w-full py-3 bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-bold tracking-widest transition-colors mb-2.5 rounded-lg"
                 >
                   REQUEST SANDBOX ACCESS <ArrowRight className="w-3.5 h-3.5" />
                 </Link>
                 <Link
                   to="/contact"
-                  className="flex items-center justify-center gap-2 w-full py-3 border border-slate-700 hover:bg-slate-800/40 text-slate-300 text-xs font-bold tracking-widest transition-colors"
+                  className="flex items-center justify-center gap-2 w-full py-3 border border-slate-700 hover:bg-slate-800/40 text-slate-300 text-xs font-bold tracking-widest transition-colors rounded-lg"
                 >
                   SPEAK TO AN EXPERT
                 </Link>

@@ -124,7 +124,7 @@ export default function WhyConnect() {
                 transition={{ duration: 0.35 }}
                 className="flex justify-center mb-8 relative z-10"
               >
-                <span className={`${group.labelColor} text-white text-xs font-black tracking-[0.18em] px-5 py-2`}>
+                <span className={`${group.labelColor} text-white text-xs font-black tracking-[0.18em] px-5 py-2 rounded-lg`}>
                   {group.label}
                 </span>
               </motion.div>
@@ -142,7 +142,7 @@ export default function WhyConnect() {
                       flex-col
                     `}
                   >
-                    <div className={`w-full sm:w-[calc(50%-2rem)] bg-white border border-gray-100 hover:shadow-md transition-shadow duration-300 flex flex-col sm:flex-row
+                    <div className={`w-full sm:w-[calc(50%-2rem)] bg-white border border-gray-100 hover:shadow-md transition-shadow duration-300 flex flex-col sm:flex-row rounded-xl overflow-hidden
                       ${item.side === 'right' ? 'sm:ml-auto' : ''}
                     `}>
                       <div className="w-full sm:w-32 h-40 sm:h-auto flex-shrink-0 overflow-hidden">

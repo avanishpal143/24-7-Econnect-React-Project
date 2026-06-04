@@ -7,70 +7,48 @@ import SEOMeta from '../components/shared/SEOMeta';
 
 const serviceCategories = [
   {
+    icon: MessageSquare,
+    title: 'WhatsApp Marketing',
+    tagline: 'Official WhatsApp Business API-powered bulk marketing',
+    desc: 'Send bulk WhatsApp messages, run promotional campaigns, and automate customer communication via the official WhatsApp Business API with 98% open rates.',
+    specs: ['Official WhatsApp Business API', 'Bulk campaign management', 'Real-time delivery analytics', 'Chatbot & automation support', 'Meta template approval guidance'],
+    color: 'text-green-500',
+    bg: 'bg-green-50',
+    border: 'border-t-green-500',
+    link: '/services/whatsapp-marketing',
+  },
+  {
     icon: Smartphone,
-    title: 'SMS Termination',
-    tagline: 'High-delivery A2P messaging via direct carrier routes',
-    desc: 'Deliver A2P SMS traffic through direct carrier interconnects with no grey routes. Our optimized routing engine selects the best path per destination for maximum delivery rates and minimum latency.',
-    specs: ['Direct carrier interconnects', 'No grey routes', 'Redundant failover paths', 'Real-time delivery monitoring', 'Delivery rate reporting'],
+    title: 'Bulk SMS Service',
+    tagline: 'Carrier-grade transactional, promotional & OTP campaigns',
+    desc: 'Deliver high-volume text messages globally with 99%+ delivery rates. Connect via REST API or SMPP v3.4 for priority routing with automatic failovers.',
+    specs: ['Transactional & promotional SMS', 'Priority OTP delivery lanes', 'Real-time campaign analytics', 'TRAI DLT compliance support', 'Global operator coverage'],
     color: 'text-indigo-500',
     bg: 'bg-indigo-50',
     border: 'border-t-indigo-500',
-    link: '/solutions/sms-termination',
-  },
-  {
-    icon: MessageSquare,
-    title: 'OTP Messaging',
-    tagline: 'Low-latency OTP delivery with high success rates',
-    desc: 'Priority routing for time-sensitive OTP traffic. Sub-5-second delivery guaranteed via dedicated carrier lanes with automatic retry logic and fallback routes.',
-    specs: ['Sub-5s delivery SLA', 'Priority carrier lanes', 'Automatic retry logic', 'Fallback route support', 'DLT compliant'],
-    color: 'text-emerald-500',
-    bg: 'bg-emerald-50',
-    border: 'border-t-emerald-500',
-    link: '/solutions/otp-messaging',
+    link: '/services/bulk-sms',
   },
   {
     icon: Phone,
-    title: 'Voice Services',
-    tagline: 'CLI and non-CLI voice routing with global coverage',
-    desc: 'Carrier-grade voice termination with CLI and non-CLI routes across 190+ countries. HD voice quality with intelligent routing for optimal call completion rates.',
-    specs: ['CLI & non-CLI routes', 'Global coverage 190+ countries', 'HD voice quality', 'Call completion optimization', 'Real-time call analytics'],
+    title: 'Voice Call Service',
+    tagline: 'Automated outbound voice broadcasting & IVR systems',
+    desc: 'Deliver pre-recorded voice broadcasts and build multi-level IVR menus at scale. Access high-quality CLI and non-CLI routing for optimal call completion.',
+    specs: ['Outbound voice broadcasting', 'Multi-level IVR system', 'CLI & non-CLI routes', 'HD call quality & low latency', 'Call duration & ASR analytics'],
     color: 'text-orange-500',
     bg: 'bg-orange-50',
     border: 'border-t-orange-500',
-    link: '/solutions/voice-services',
-  },
-  {
-    icon: Globe,
-    title: 'Bulk Messaging',
-    tagline: 'Campaign messaging with real-time analytics',
-    desc: 'High-volume bulk SMS delivery for promotional and transactional campaigns. Intelligent routing with delivery optimization and real-time campaign analytics.',
-    specs: ['High-volume throughput', 'Campaign scheduling', 'Real-time analytics', 'Delivery optimization', 'Sender ID management'],
-    color: 'text-sky-500',
-    bg: 'bg-sky-50',
-    border: 'border-t-sky-500',
-    link: '/solutions/bulk-messaging',
+    link: '/services/voice-call',
   },
   {
     icon: Wifi,
-    title: 'SMPP/API Integration',
-    tagline: 'Easy integration with scalable throughput',
-    desc: 'Enterprise-grade SMPP v3.4 and REST API connectivity with high TPS capacity. Full sandbox environment for testing before production deployment.',
-    specs: ['SMPP v3.4 protocol', 'REST API with full docs', 'High TPS capacity', 'Sandbox environment', 'SDK support'],
+    title: 'WhatsApp API',
+    tagline: 'Official Meta integration for developers & platforms',
+    desc: 'Connect your CRM, helpdesk, or custom platform to Meta\'s official WhatsApp Business API. Set up webhooks for two-way conversations and automated bots.',
+    specs: ['Official Meta partner access', 'REST API & webhook support', 'Two-way conversational messaging', 'CRM & e-commerce integrations', 'Full developer sandbox'],
     color: 'text-violet-500',
     bg: 'bg-violet-50',
     border: 'border-t-violet-500',
-    link: '/solutions/smpp-api',
-  },
-  {
-    icon: FileCheck,
-    title: 'India DLT Compliance',
-    tagline: 'Fully compliant messaging for Indian operators',
-    desc: 'End-to-end TRAI DLT compliance management. Entity registration, header management, and template approval across all major Indian telecom operators.',
-    specs: ['TRAI DLT registration', 'All operators covered', 'Header & template approval', 'Consent management', 'Ongoing compliance support'],
-    color: 'text-rose-500',
-    bg: 'bg-rose-50',
-    border: 'border-t-rose-500',
-    link: '/solutions/dlt-compliance',
+    link: '/services/whatsapp-api',
   },
 ];
 
@@ -106,7 +84,7 @@ export default function Services() {
                 Deploy high-throughput WhatsApp marketing campaigns, priority transaction OTP messages, and intelligent automated voice broadcasting on a single carrier-grade global infrastructure.
               </motion.p>
               <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.3 }}>
-                <Link to="/contact" className="inline-flex items-center gap-2 px-8 py-3.5 bg-indigo-600 text-white text-xs font-black tracking-widest hover:bg-indigo-700 transition-colors">
+                <Link to="/contact" className="inline-flex items-center gap-2 px-8 py-3.5 bg-indigo-600 text-white text-xs font-black tracking-widest hover:bg-indigo-700 transition-colors rounded-lg">
                   REQUEST ROUTING TEST <ArrowRight className="w-4 h-4" />
                 </Link>
               </motion.div>
@@ -143,10 +121,10 @@ export default function Services() {
             </div>
           </motion.div>
 
-          <motion.div initial="initial" whileInView="animate" viewport={{ once: true }} variants={staggerContainer} className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <motion.div initial="initial" whileInView="animate" viewport={{ once: true }} variants={staggerContainer} className="grid sm:grid-cols-2 lg:grid-cols-2 gap-6 max-w-5xl mx-auto">
             {serviceCategories.map((svc) => (
-              <motion.div key={svc.title} variants={fadeInUp} className={`bg-white border border-gray-100 border-t-4 ${svc.border} p-7 hover:shadow-md transition-all duration-300`}>
-                <div className={`w-12 h-12 ${svc.bg} flex items-center justify-center mb-5`}>
+              <motion.div key={svc.title} variants={fadeInUp} className={`bg-white border border-gray-100 border-t-4 ${svc.border} p-7 hover:shadow-md transition-all duration-300 rounded-xl`}>
+                <div className={`w-12 h-12 ${svc.bg} flex items-center justify-center mb-5 rounded-lg`}>
                   <svc.icon className={`w-6 h-6 ${svc.color}`} />
                 </div>
                 <h3 className="text-base font-black text-gray-900 tracking-tight mb-1">{svc.title}</h3>
@@ -184,7 +162,7 @@ export default function Services() {
           </motion.div>
           <motion.div initial="initial" whileInView="animate" viewport={{ once: true }} variants={staggerContainer} className="grid sm:grid-cols-3 gap-6">
             {platformFeatures.map((feature) => (
-              <motion.div key={feature.title} variants={fadeInUp} className="bg-white border border-gray-100 p-7 hover:border-gray-300 hover:shadow-sm transition-all duration-300 text-center">
+              <motion.div key={feature.title} variants={fadeInUp} className="bg-white border border-gray-100 p-7 hover:border-gray-300 hover:shadow-sm transition-all duration-300 text-center rounded-xl">
                 <feature.icon className={`w-10 h-10 ${feature.color} mb-4 mx-auto`} strokeWidth={1.5} />
                 <h3 className="text-sm font-black text-gray-900 tracking-tight mb-2">{feature.title}</h3>
                 <p className="text-sm text-gray-500 leading-relaxed">{feature.desc}</p>

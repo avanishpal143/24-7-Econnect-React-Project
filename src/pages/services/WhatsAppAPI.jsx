@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { ArrowRight, ArrowLeft, Check, Wifi, MessageSquare, Zap, BarChart3, Shield, Code } from 'lucide-react';
+import { ArrowLeft, Check, Wifi, MessageSquare, Zap, BarChart3, Shield, Code } from 'lucide-react';
 import { fadeInUp, staggerContainer } from '../../lib/utils';
 import SEOMeta from '../../components/shared/SEOMeta';
 import CTASection from '../../components/sections/CTASection';
@@ -129,27 +129,17 @@ export default function WhatsAppAPI() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-white/70 text-lg max-w-xl leading-relaxed mb-6"
+            className="text-white/70 text-lg max-w-xl leading-relaxed"
           >
-            Integrate WhatsApp Business API into your applications, automate customer communication, and build intelligent chatbots, with EConnect as your official WhatsApp BSP globally.
+            Integrate official WhatsApp Business API into your systems to automate communication and build chatbots.
           </motion.p>
           
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.3 }}
-            className="flex flex-wrap gap-4 mb-8">
-            <Link to="/contact" className="inline-flex items-center gap-2 px-8 py-3.5 bg-green-600 text-white text-xs font-black tracking-widest hover:bg-green-700 transition-colors">
-              GET API ACCESS <ArrowRight className="w-4 h-4" />
-            </Link>
-            <Link to="/contact" className="inline-flex items-center gap-2 px-8 py-3.5 border border-white/30 text-white text-xs font-black tracking-widest hover:border-white/60 transition-colors">
-              VIEW DOCUMENTATION
-            </Link>
-          </motion.div>
-
           {/* Stats row */}
           <motion.div
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
-            className="flex flex-wrap gap-8 border-t border-white/10 pt-6"
+            className="flex flex-wrap gap-8 mt-8"
           >
             {[
               { v: 'Official', l: 'Meta BSP Partner' },
@@ -172,15 +162,15 @@ export default function WhatsAppAPI() {
           <motion.div initial="initial" whileInView="animate" viewport={{ once: true }} variants={fadeInUp} className="text-center mb-12">
             <p className="text-xs font-bold tracking-[0.2em] text-green-500 uppercase mb-3">API Features</p>
             <h2 id="wapi-features-heading" className="text-3xl sm:text-4xl font-black text-gray-900 tracking-tight mb-3">
-              Everything You Need to Build on WhatsApp API
+              Everything You Need to Build<br />on WhatsApp API
             </h2>
           </motion.div>
           <motion.div initial="initial" whileInView="animate" viewport={{ once: true }} variants={staggerContainer}
             className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {features.map((f) => (
               <motion.div key={f.title} variants={fadeInUp}
-                className="bg-white border border-gray-100 p-7 hover:shadow-md transition-all duration-300">
-                <div className={`w-12 h-12 ${f.bg} flex items-center justify-center mb-5`}>
+                className="bg-white border border-gray-100 p-7 hover:shadow-md transition-all duration-300 rounded-xl">
+                <div className={`w-12 h-12 ${f.bg} flex items-center justify-center mb-5 rounded-lg`}>
                   <f.icon className={`w-6 h-6 ${f.color}`} />
                 </div>
                 <h3 className="text-base font-black text-gray-900 tracking-tight mb-2">{f.title}</h3>
@@ -198,7 +188,7 @@ export default function WhatsAppAPI() {
             <motion.div initial="initial" whileInView="animate" viewport={{ once: true }} variants={fadeInUp}>
               <p className="text-xs font-bold tracking-[0.2em] text-green-500 uppercase mb-3">Integration</p>
               <h2 id="wapi-integration-heading" className="text-3xl font-black text-gray-900 tracking-tight mb-5">
-                Integrate WhatsApp API with Your Existing Systems
+                Integrate WhatsApp API with<br />Your Existing Systems
               </h2>
               <p className="text-gray-600 text-sm leading-relaxed mb-6">
                 EConnect's WhatsApp API connects seamlessly with your CRM, e-commerce platform, helpdesk, and custom applications. Our REST API and webhook system make integration straightforward for any tech stack.
@@ -219,7 +209,7 @@ export default function WhatsAppAPI() {
               </ul>
             </motion.div>
             <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }}
-              className="bg-gray-900 p-8">
+              className="bg-gray-900 p-8 rounded-xl">
               <p className="text-xs font-bold tracking-[0.2em] text-green-400 uppercase mb-4">Quick Start</p>
               <div className="space-y-4">
                 {[
@@ -248,12 +238,12 @@ export default function WhatsAppAPI() {
           <motion.div initial="initial" whileInView="animate" viewport={{ once: true }} variants={fadeInUp} className="text-center mb-10">
             <p className="text-xs font-bold tracking-[0.2em] text-green-500 uppercase mb-3">FAQ</p>
             <h2 id="wapi-faq-heading" className="text-3xl font-black text-gray-900 tracking-tight">
-              WhatsApp API: Common Questions
+              WhatsApp API:<br />Common Questions
             </h2>
           </motion.div>
           <motion.div initial="initial" whileInView="animate" viewport={{ once: true }} variants={staggerContainer} className="space-y-4">
             {faqs.map((faq, i) => (
-              <motion.div key={i} variants={fadeInUp} className="border border-gray-100 border-l-4 border-l-green-500 p-6 bg-white">
+              <motion.div key={i} variants={fadeInUp} className="border border-gray-100 border-l-4 border-l-green-500 p-6 bg-white rounded-xl overflow-hidden">
                 <h3 className="text-sm font-bold text-gray-900 mb-2">{faq.q}</h3>
                 <p className="text-sm text-gray-600 leading-relaxed">{faq.a}</p>
               </motion.div>
@@ -276,7 +266,7 @@ export default function WhatsAppAPI() {
               { label: 'Contact Sales', to: '/contact' },
             ].map((link) => (
               <Link key={link.label} to={link.to}
-                className="px-4 py-2 text-xs font-semibold text-gray-600 bg-white border border-gray-200 hover:border-green-500 hover:text-green-600 transition-colors">
+                className="px-4 py-2 text-xs font-semibold text-gray-600 bg-white border border-gray-200 hover:border-green-500 hover:text-green-600 transition-colors rounded-lg">
                 {link.label}
               </Link>
             ))}

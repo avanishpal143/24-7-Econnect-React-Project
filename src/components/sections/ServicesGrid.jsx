@@ -105,7 +105,7 @@ export default function ServicesGrid() {
               <button
                 key={cat}
                 onClick={() => setActive(cat)}
-                className={`px-5 py-2 text-xs font-bold tracking-widest uppercase transition-all duration-200 ${
+                className={`px-5 py-2 text-xs font-bold tracking-widest uppercase rounded-lg transition-all duration-200 ${
                   active === cat
                     ? 'bg-gray-900 text-white'
                     : 'bg-white text-gray-500 border border-gray-200 hover:border-gray-400 hover:text-gray-800'
@@ -139,13 +139,13 @@ export default function ServicesGrid() {
                 <div className={`h-1 w-full bg-gradient-to-r ${service.accent}`} />
 
                 {service.popular && (
-                  <span className="absolute top-4 right-4 px-2.5 py-1 text-xs font-bold bg-gray-900 text-white tracking-wider">
+                  <span className="absolute top-4 right-4 px-2.5 py-1 text-xs font-bold bg-gray-900 text-white tracking-wider rounded-md">
                     POPULAR
                   </span>
                 )}
 
                 <div className="p-7">
-                  <div className={`w-14 h-14 ${service.iconBg} flex items-center justify-center mb-5 group-hover:scale-105 transition-transform`}>
+                  <div className={`w-14 h-14 ${service.iconBg} flex items-center justify-center mb-5 group-hover:scale-105 transition-transform rounded-lg`}>
                     <service.icon className={`w-7 h-7 ${service.iconColor}`} />
                   </div>
 

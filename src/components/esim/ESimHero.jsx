@@ -73,7 +73,7 @@ export default function ESimHero() {
         <div className="absolute top-0 right-1/3 w-px h-full bg-gradient-to-b from-transparent via-emerald-500/20 to-transparent" />
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-5 lg:px-8 py-20 lg:py-0">
+      <div className="relative max-w-7xl mx-auto px-5 lg:px-8 pt-28 pb-20 lg:py-0">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
           {/* ── LEFT: Content ── */}
@@ -98,11 +98,11 @@ export default function ESimHero() {
               transition={{ duration: 0.7, delay: 0.1 }}
               className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-[1.05] tracking-tight mb-6"
             >
-              Global eSIM
+              Global eSIM{" "}
               <br className="hidden lg:inline" />
               <span className="bg-gradient-to-r from-indigo-600 to-indigo-500 bg-clip-text text-transparent">
                 Connectivity
-              </span>
+              </span>{" "}
               <br className="hidden lg:inline" />
               for Modern Travelers
             </motion.h1>
@@ -163,7 +163,7 @@ export default function ESimHero() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="relative flex items-center justify-center"
+            className="relative flex items-center justify-center mt-12 lg:mt-0 pb-12 sm:pb-0"
           >
             {/* Outer glow ring */}
             <motion.div

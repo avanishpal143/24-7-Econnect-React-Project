@@ -165,6 +165,7 @@
   .e-card {
     background-color: #ffffff;
     border: 1px solid #e2e8f0;
+    border-radius: 0.5rem;
     transition: border-color 200ms ease, box-shadow 200ms ease;
   }
   .e-card:hover {
@@ -212,6 +213,7 @@
     font-size: 0.75rem;
     font-weight: 600;
     letter-spacing: 0.05em;
+    border-radius: 0.5rem;
     transition: background-color 200ms ease;
   }
   .btn-primary:hover { background-color: #4338ca; }
@@ -230,6 +232,7 @@
     font-size: 0.75rem;
     font-weight: 600;
     letter-spacing: 0.05em;
+    border-radius: 0.5rem;
     transition: background-color 200ms ease, color 200ms ease, border-color 200ms ease;
   }
   .btn-outline:hover {
@@ -251,6 +254,7 @@
     font-size: 0.75rem;
     font-weight: 600;
     letter-spacing: 0.05em;
+    border-radius: 0.5rem;
     transition: border-color 200ms ease, background-color 200ms ease;
   }
   .btn-ghost:hover {
@@ -267,6 +271,7 @@
     font-family: var(--font-body);
     font-size: 0.875rem;
     color: #0f172a;
+    border-radius: 0.5rem;
     transition: border-color 200ms ease, box-shadow 200ms ease;
     outline: none;
   }

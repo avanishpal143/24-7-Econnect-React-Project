@@ -93,7 +93,7 @@ export default function AboutPreview() {
 
             <Link
               to="/about"
-              className="inline-flex items-center gap-2 px-8 py-3.5 border-2 border-gray-900 text-gray-900 text-xs font-black tracking-widest hover:bg-gray-900 hover:text-white transition-all duration-300 group"
+              className="inline-flex items-center gap-2 px-8 py-3.5 border-2 border-gray-900 text-gray-900 text-xs font-black tracking-widest hover:bg-gray-900 hover:text-white transition-all duration-300 group rounded-lg"
             >
               LEARN MORE ABOUT US
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -122,9 +122,9 @@ export default function AboutPreview() {
                 <motion.div
                   key={cap.title}
                   variants={fadeInUp}
-                  className="bg-gray-50 border border-gray-100 p-5 hover:border-gray-200 hover:shadow-sm transition-all duration-300 group"
+                  className="bg-gray-50 border border-gray-100 p-5 hover:border-gray-200 hover:shadow-sm transition-all duration-300 group rounded-xl"
                 >
-                  <div className={`w-10 h-10 ${cap.bg} flex items-center justify-center mb-4 group-hover:scale-105 transition-transform`}>
+                  <div className={`w-10 h-10 ${cap.bg} flex items-center justify-center mb-4 group-hover:scale-105 transition-transform rounded-lg`}>
                     <cap.icon className={`w-5 h-5 ${cap.color}`} />
                   </div>
                   <h4 className="text-sm font-black text-gray-900 tracking-tight mb-2">{cap.title}</h4>
@@ -134,13 +134,13 @@ export default function AboutPreview() {
             </div>
 
             {/* Industries strip */}
-            <div className="mt-6 p-5 bg-gray-900 border border-gray-800">
+            <div className="mt-6 p-5 bg-gray-900 border border-gray-800 rounded-xl">
               <p className="text-xs font-bold tracking-[0.2em] text-gray-400 uppercase mb-4">Industries Served</p>
               <div className="flex flex-wrap gap-2">
                 {['Fintech', 'Healthcare', 'E-commerce', 'Telecom', 'Enterprise Platforms'].map((ind) => (
                   <span
                     key={ind}
-                    className="px-3 py-1.5 text-xs font-semibold text-white/70 border border-white/10 hover:border-white/30 hover:text-white transition-colors"
+                    className="px-3 py-1.5 text-xs font-semibold text-white/70 border border-white/10 hover:border-white/30 hover:text-white transition-colors rounded-lg"
                   >
                     {ind}
                   </span>

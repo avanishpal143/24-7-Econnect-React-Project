@@ -136,7 +136,7 @@ export default function SolutionDetail() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5 }}
-                className="border border-gray-100 p-6"
+                className="border border-gray-100 p-6 rounded-xl bg-white shadow-sm"
               >
                 <h3 className="text-xs font-black tracking-[0.2em] text-gray-900 uppercase mb-4">Use Cases</h3>
                 <ul className="space-y-2.5">
@@ -155,7 +155,7 @@ export default function SolutionDetail() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.1 }}
-                className="bg-gray-900 p-6"
+                className="bg-gray-900 p-6 rounded-xl"
               >
                 <div className={`w-10 h-10 ${sol.accentLight} flex items-center justify-center mb-4`}>
                   <sol.icon className={`w-5 h-5 ${sol.accent}`} />
@@ -166,13 +166,13 @@ export default function SolutionDetail() {
                 </p>
                 <Link
                   to="/contact"
-                  className="flex items-center justify-center gap-2 w-full py-3 bg-white text-gray-900 text-xs font-black tracking-widest hover:bg-gray-100 transition-colors mb-2"
+                  className="flex items-center justify-center gap-2 w-full py-3 bg-white text-gray-900 text-xs font-black tracking-widest hover:bg-gray-100 transition-colors mb-2 rounded-lg"
                 >
                   REQUEST ROUTING TEST <ArrowRight className="w-3.5 h-3.5" />
                 </Link>
                 <Link
                   to="/contact"
-                  className="flex items-center justify-center gap-2 w-full py-3 border border-white/20 text-white text-xs font-bold tracking-widest hover:bg-white/10 transition-colors"
+                  className="flex items-center justify-center gap-2 w-full py-3 border border-white/20 text-white text-xs font-bold tracking-widest hover:bg-white/10 transition-colors rounded-lg"
                 >
                   CONTACT SALES
                 </Link>
@@ -214,7 +214,7 @@ export default function SolutionDetail() {
               <motion.div
                 key={f.title}
                 variants={fadeInUp}
-                className={`bg-white border border-gray-100 border-t-4 ${sol.border} p-6 hover:shadow-sm transition-shadow duration-300`}
+                className={`bg-white border border-gray-100 border-t-4 ${sol.border} p-6 hover:shadow-sm transition-shadow duration-300 rounded-xl overflow-hidden`}
               >
                 <div className="flex items-start gap-3">
                   <div className={`w-8 h-8 ${sol.accentLight} flex items-center justify-center flex-shrink-0 mt-0.5`}>
@@ -256,7 +256,7 @@ export default function SolutionDetail() {
               <motion.div
                 key={other.slug}
                 variants={fadeInUp}
-                className={`group border border-gray-100 border-t-4 ${other.border} hover:shadow-sm transition-all duration-300 p-5`}
+                className={`group border border-gray-100 border-t-4 ${other.border} hover:shadow-sm transition-all duration-300 p-5 rounded-xl overflow-hidden`}
               >
                 <span className={`text-[10px] font-black tracking-[0.2em] uppercase ${other.accent} mb-2 block`}>{other.tag}</span>
                 <h3 className="text-sm font-black text-gray-900 mb-1 tracking-tight">{other.title}</h3>
@@ -272,7 +272,7 @@ export default function SolutionDetail() {
           </motion.div>
 
           <div className="mt-8 text-center">
-            <Link to="/solutions" className="inline-flex items-center gap-2 px-6 py-3 border-2 border-gray-900 text-gray-900 text-xs font-black tracking-widest hover:bg-gray-900 hover:text-white transition-all duration-200">
+            <Link to="/solutions" className="inline-flex items-center gap-2 px-6 py-3 border-2 border-gray-900 text-gray-900 text-xs font-black tracking-widest hover:bg-gray-900 hover:text-white transition-all duration-200 rounded-lg">
               VIEW ALL SOLUTIONS <ArrowRight className="w-4 h-4" />
             </Link>
           </div>

@@ -69,7 +69,7 @@ export default function HomeFAQ() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.05 }}
-              className="bg-white border border-gray-100 overflow-hidden"
+              className="bg-white border border-gray-100 overflow-hidden rounded-lg"
             >
               <button
                 onClick={() => setOpen(open === i ? null : i)}

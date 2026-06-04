@@ -110,14 +110,14 @@ export default function Hero() {
             <div className="flex flex-wrap items-center justify-center gap-4">
               <Link
                 to={slide.cta.to}
-                className="inline-flex items-center px-9 py-3.5 bg-indigo-600 text-white text-xs font-bold tracking-wide rounded-sm shadow-[0_0_24px_rgba(79,70,229,0.3)] hover:shadow-[0_0_36px_rgba(79,70,229,0.45)] hover:bg-indigo-500 hover:scale-[1.02] transition-all duration-300"
+                className="inline-flex items-center px-9 py-3.5 bg-indigo-600 text-white text-xs font-bold tracking-wide rounded-lg shadow-[0_0_24px_rgba(79,70,229,0.3)] hover:shadow-[0_0_36px_rgba(79,70,229,0.45)] hover:bg-indigo-500 hover:scale-[1.02] transition-all duration-300"
                 style={{ fontFamily: 'var(--font-display)' }}
               >
                 {slide.cta.label}
               </Link>
               <Link
                 to={slide.cta2.to}
-                className="inline-flex items-center px-9 py-3.5 border border-white/40 text-white/90 text-xs font-bold tracking-wide rounded-sm hover:border-white hover:bg-white/10 hover:text-white hover:scale-[1.02] transition-all duration-300"
+                className="inline-flex items-center px-9 py-3.5 border border-white/40 text-white/90 text-xs font-bold tracking-wide rounded-lg hover:border-white hover:bg-white/10 hover:text-white hover:scale-[1.02] transition-all duration-300"
                 style={{ fontFamily: 'var(--font-display)' }}
               >
                 {slide.cta2.label}

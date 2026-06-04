@@ -60,7 +60,7 @@ export default function Features() {
               <motion.div
                 animate={{ y: [0, -6, 0] }}
                 transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
-                className="absolute bottom-4 right-4 bg-indigo-700 text-white px-5 py-3 shadow-lg"
+                className="absolute bottom-4 right-4 bg-indigo-700 text-white px-5 py-3 shadow-lg rounded-lg"
               >
                 <div className="text-2xl font-extrabold leading-none">99.95%</div>
                 <div className="text-[10px] text-indigo-200 font-medium tracking-wider uppercase mt-0.5">Uptime SLA</div>

@@ -7,7 +7,7 @@ export default function WhatsAppFloating() {
   return (
     <div className="fixed bottom-6 left-6 z-50 flex items-center group">
       {/* Tooltip text */}
-      <span className="absolute left-16 bg-slate-900 text-white text-xs font-semibold px-3 py-1.5 shadow-md pointer-events-none opacity-0 translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 whitespace-nowrap border border-slate-800">
+      <span className="absolute left-16 bg-slate-900 text-white text-xs font-semibold px-3 py-1.5 shadow-md pointer-events-none opacity-0 translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 whitespace-nowrap border border-slate-800 rounded-lg">
         Chat with us
       </span>
 
