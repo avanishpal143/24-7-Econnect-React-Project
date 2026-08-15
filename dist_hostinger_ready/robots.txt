@@ -1,0 +1,28 @@
+# robots.txt — 24x7 E-Connect | Crafted by Devlofox (devlofox.com)
+
+User-agent: *
+Allow: /
+
+# Block crawl budget waste on utility/legal pages
+Disallow: /privacy-policy
+Disallow: /terms
+
+# Block any future admin or API paths
+Disallow: /api/
+Disallow: /admin/
+
+# Allow all major crawlers explicitly
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+# Sitemap location
+Sitemap: https://24x7econnect.com/sitemap.xml

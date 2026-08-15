@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- sitemap.xml — 24x7 E-Connect | Crafted by Devlofox (devlofox.com) -->
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+    http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+  <!-- ═══════════════════════════════════════════
+       TIER 1 — Homepage (highest priority)
+  ═══════════════════════════════════════════ -->
+  <url>
+    <loc>https://24x7econnect.com/</loc>
+    <lastmod>2025-05-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- ═══════════════════════════════════════════
+       TIER 2 — Primary Service Pages (SEO targets)
+  ═══════════════════════════════════════════ -->
+  <url>
+    <loc>https://24x7econnect.com/services/whatsapp-marketing</loc>
+    <lastmod>2025-05-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://24x7econnect.com/services/bulk-sms</loc>
+    <lastmod>2025-05-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://24x7econnect.com/services/voice-call</loc>
+    <lastmod>2025-05-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://24x7econnect.com/services/whatsapp-api</loc>
+    <lastmod>2025-05-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <!-- ═══════════════════════════════════════════
+       TIER 3 — Core Navigation Pages
+  ═══════════════════════════════════════════ -->
+  <url>
+    <loc>https://24x7econnect.com/services</loc>
+    <lastmod>2025-05-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://24x7econnect.com/solutions</loc>
+    <lastmod>2025-05-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://24x7econnect.com/pricing</loc>
+    <lastmod>2025-05-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://24x7econnect.com/contact</loc>
+    <lastmod>2025-05-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://24x7econnect.com/about</loc>
+    <lastmod>2025-05-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- ═══════════════════════════════════════════
+       TIER 4 — Solution Detail Pages
+  ═══════════════════════════════════════════ -->
+  <url>
+    <loc>https://24x7econnect.com/solutions/sms-termination</loc>
+    <lastmod>2025-05-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://24x7econnect.com/solutions/otp-messaging</loc>
+    <lastmod>2025-05-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://24x7econnect.com/solutions/voice-services</loc>
+    <lastmod>2025-05-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://24x7econnect.com/solutions/bulk-messaging</loc>
+    <lastmod>2025-05-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://24x7econnect.com/solutions/smpp-api</loc>
+    <lastmod>2025-05-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://24x7econnect.com/solutions/dlt-compliance</loc>
+    <lastmod>2025-05-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- ═══════════════════════════════════════════
+       TIER 5 — Blog / Content Pages
+  ═══════════════════════════════════════════ -->
+  <url>
+    <loc>https://24x7econnect.com/blog</loc>
+    <lastmod>2025-05-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://24x7econnect.com/blog/what-is-a2p-sms</loc>
+    <lastmod>2025-05-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://24x7econnect.com/blog/how-otp-delivery-works</loc>
+    <lastmod>2025-05-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://24x7econnect.com/blog/dlt-regulations-india</loc>
+    <lastmod>2025-05-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://24x7econnect.com/blog/sms-routing-explained</loc>
+    <lastmod>2025-05-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+</urlset>
