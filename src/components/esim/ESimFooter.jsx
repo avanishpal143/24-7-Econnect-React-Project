@@ -7,12 +7,17 @@ export default function ESimFooter() {
       <div className="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-4 gap-10">
         {/* Brand */}
         <div className="space-y-4">
-          <Link to="/" className="inline-block">
+          <Link to="/esim" className="inline-flex items-center gap-2.5">
             <img
-              src="/Screenshot_2026-06-04_at_1.49.15_PM-removebg-preview.png"
+              src="/imgs/logo-white.png"
               alt="EConnect"
               className="h-8 w-auto object-contain hover:scale-105 transition-all duration-300"
+              onError={(e) => { e.target.src = '/imgs/Screenshot_2026-06-04_at_1.49.15_PM-removebg-preview.png'; }}
             />
+            <span className="w-px h-7 bg-white/30 mx-1" />
+            <span className="text-sm font-extrabold tracking-[0.22em] uppercase text-indigo-400">
+              ESIM
+            </span>
           </Link>
           <p className="text-white/50 text-sm leading-relaxed">
             Stay connected globally with instant eSIM activation for 190+ countries. No physical SIM required.

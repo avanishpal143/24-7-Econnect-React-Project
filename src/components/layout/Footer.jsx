@@ -46,15 +46,16 @@ const footerLinks = {
     { name: 'How OTP Delivery Works', href: '/blog/how-otp-delivery-works' },
     { name: 'DLT Regulations India', href: '/blog/dlt-regulations-india' },
     { name: 'SMS Routing Explained', href: '/blog/sms-routing-explained' },
+    { name: 'CMS Admin Portal', href: '/admin' },
     { name: 'Privacy Policy', href: '/privacy-policy' },
     { name: 'Terms & Conditions', href: '/terms' },
   ],
 };
 
 const socialLinks = [
-  { icon: LinkedInIcon, href: '#', label: 'LinkedIn' },
-  { icon: FacebookIcon, href: '#', label: 'Facebook' },
-  { icon: InstagramIcon, href: '#', label: 'Instagram' },
+  { icon: LinkedInIcon, href: 'https://www.linkedin.com/company/24x7econnect/', label: 'LinkedIn' },
+  { icon: FacebookIcon, href: 'https://www.facebook.com/profile.php?id=61590427572946', label: 'Facebook' },
+  { icon: InstagramIcon, href: 'https://www.instagram.com/24x7econnect/', label: 'Instagram' },
 ];
 
 export default function Footer() {
@@ -67,7 +68,7 @@ export default function Footer() {
           <div className="col-span-2 lg:col-span-2">
             <Link to="/" className="inline-block mb-6">
               <img
-                src="/Screenshot_2026-06-04_at_1.49.15_PM-removebg-preview.png"
+                src="/imgs/Screenshot_2026-06-04_at_1.49.15_PM-removebg-preview.png"
                 alt="EConnect"
                 className="h-8 w-auto object-contain drop-shadow-[0_2px_12px_rgba(99,102,241,0.5)] hover:scale-105 transition-all duration-300"
               />
@@ -97,7 +98,6 @@ export default function Footer() {
             {/* Company registration */}
             <div className="text-xs text-slate-400 leading-relaxed">
               <p>24x7 EConnect Pvt. Ltd.</p>
-              <p>CIN: U74999DL2018PTC000000</p>
             </div>
           </div>
 

@@ -37,7 +37,7 @@ export default function ESimHero() {
         {/* Background Image */}
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-[0.85]"
-          style={{ backgroundImage: 'url(/esim-hero-bg.png)' }}
+          style={{ backgroundImage: 'url(/imgs/esim-hero-bg.png)' }}
         />
         {/* Soft overlay to ensure text visibility */}
         <div className="absolute inset-0 bg-slate-50/60" />

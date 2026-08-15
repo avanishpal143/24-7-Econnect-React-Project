@@ -59,10 +59,14 @@ export default function ESimNavbar() {
           {/* Logo */}
           <Link to="/esim" className="flex items-center gap-2.5 group">
             <img
-              src="/logo-black.png"
+              src="/imgs/logo-black.png"
               alt="EConnect"
               className="h-8 w-auto object-contain"
             />
+            <span className="w-px h-7 bg-slate-300 mx-1" />
+            <span className="text-sm font-extrabold tracking-[0.22em] uppercase text-indigo-600">
+              ESIM
+            </span>
           </Link>
 
           {/* Desktop links */}

@@ -316,7 +316,7 @@ export default function Solutions() {
             >
               <div className="relative p-2 bg-white/5 border border-white/10 rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.4)] overflow-hidden max-w-lg lg:max-w-full">
                 <img
-                  src="/solutions-hero.png"
+                  src="/imgs/solutions-hero.png"
                   alt="Enterprise Telecom Network Solutions"
                   className="w-full h-auto object-cover rounded-xl border border-white/5 shadow-inner"
                 />

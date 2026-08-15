@@ -74,7 +74,7 @@ export default function Navbar() {
           {/* ── Logo ── */}
           <Link to="/" className="flex-shrink-0 flex items-center">
             <img
-              src={transparent ? "/logo-white.png" : "/logo-black.png"}
+              src={transparent ? "/imgs/logo-white.png" : "/imgs/logo-black.png"}
               alt="E-Connect"
               className="h-8 w-auto object-contain transition-all duration-500"
             />

@@ -133,12 +133,38 @@ export default function Contact() {
     return e;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const errs = validate();
     if (Object.keys(errs).length) { setErrors(errs); return; }
     setLoading(true);
-    setTimeout(() => { setLoading(false); setSubmitted(true); }, 1200);
+    try {
+      const res = await fetch('/api/contact.php', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: form.name,
+          email: form.email,
+          phone: form.phone,
+          company: form.company,
+          country: form.country,
+          service: form.service,
+          traffic: form.traffic,
+          contactMethod: form.contactMethod,
+          message: form.message,
+        }),
+      });
+      const data = await res.json();
+      if (data.success) {
+        setSubmitted(true);
+      } else {
+        alert(data.message || 'Something went wrong. Please try again.');
+      }
+    } catch (err) {
+      alert('Network error. Please check your connection and try again.');
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (

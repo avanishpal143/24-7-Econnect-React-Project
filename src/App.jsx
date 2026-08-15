@@ -17,6 +17,7 @@ import BulkSMS from './pages/services/BulkSMS';
 import VoiceCall from './pages/services/VoiceCall';
 import WhatsAppAPI from './pages/services/WhatsAppAPI';
 import ESim from './pages/esim/ESim';
+import AdminRedirect from './pages/AdminRedirect';
 import ScrollToTop from './components/shared/ScrollToTop';
 
 function AnimatedRoutes() {
@@ -37,6 +38,7 @@ function AnimatedRoutes() {
         <Route path="/pricing"                       element={<Layout><Pricing /></Layout>} />
         <Route path="/blog"                          element={<Layout><Blog /></Layout>} />
         <Route path="/blog/:slug"                    element={<Layout><BlogDetail /></Layout>} />
+        <Route path="/admin"                         element={<AdminRedirect />} />
         <Route path="/privacy-policy"                element={<Layout><PrivacyPolicy /></Layout>} />
         <Route path="/terms"                         element={<Layout><Terms /></Layout>} />
         <Route path="/esim"                          element={<ESim />} />
